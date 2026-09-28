@@ -53,8 +53,13 @@ const ARROW_OFF = 0.13, ARROW_LEN = 0.2, ARROW_W = 0.026;
 const TOL_W = 0.24;            // מברשת סלחנית על הקנבס הנסתר
 const LOW_PPU = 40;            // פיקסלים ליחידה בקנבס הנסתר
 const SAMPLE_STEP = 0.03;
-const LETTER_DONE = 0.75;      // חלק מהקווים של האות
-const STROKE_MIN = 0.4;        // כל קו בנפרד (שלא ידלגו על זרוע של ש' או על הפתח)
+// כיסוי נמדד וקטורית: נקודת דגימה על הקו "מכוסה" רק אם עבר לידה דיו שהולך לאורך הקו.
+// דיו שחוצה את הקו (בצומת עם הקו הקודם) או נקודה בודדת — לא נחשבים.
+const COVER_TOL = TOL_W / 2;   // 0.12 יחידות מהקו עוד נחשב "על הקו"
+const COVER_COS = 0.6;         // כיוון הדיו עד ~53° מכיוון הקו
+const COVER_SLACK = 0.03;      // כמה אחרי קצה קטע הדיו עוד נחשב
+const STROKE_DONE = 0.75;      // כל קו בנפרד
+const LETTER_DONE = 0.8;       // כל הקווים של האות יחד
 const DOT_TOL = 0.14;
 const ALLOWED_W = 0.5;         // "מותר" לקשקוש: הקווים מורחבים ב-0.25 לכל צד
 const MAX_OUTSIDE = 0.5;       // יותר מזה מחוץ לקווים — "נסה לעבור בדיוק על הקווים"
@@ -561,7 +566,7 @@ export class Tracer {
   }
 
   firstOpenItem(c) {
-    return c.items.findIndex((it) => (it.kind === 'dot' ? !it.touched : it.cov < LETTER_DONE));
+    return c.items.findIndex((it) => (it.kind === 'dot' ? !it.touched : it.cov < STROKE_DONE));
   }
 
   get ready() { return !!this.word && !!this.s && this.layoutFor === this.word; }
@@ -938,11 +943,55 @@ export class Tracer {
     return { total, ratio: total ? out / total : 0, length };
   }
 
+  // קטעי הדיו לפי תאים, כדי שכל נקודת דגימה תבדוק רק את הדיו שלידה
+  inkGrid() {
+    const cell = 0.15, grid = new Map();
+    for (const st of this.strokes) for (let i = 1; i < st.length; i++) {
+      const a = st[i - 1], b = st[i];
+      const dx = b[0] - a[0], dy = b[1] - a[1], len = Math.hypot(dx, dy);
+      if (len < 1e-4) continue;
+      const seg = [a, b, dx / len, dy / len, len];
+      const x0 = Math.floor((Math.min(a[0], b[0]) - COVER_TOL) / cell), x1 = Math.floor((Math.max(a[0], b[0]) + COVER_TOL) / cell);
+      const y0 = Math.floor((Math.min(a[1], b[1]) - COVER_TOL) / cell), y1 = Math.floor((Math.max(a[1], b[1]) + COVER_TOL) / cell);
+      for (let cx = x0; cx <= x1; cx++) for (let cy = y0; cy <= y1; cy++) {
+        const key = `${cx},${cy}`;
+        const list = grid.get(key);
+        if (list) list.push(seg); else grid.set(key, [seg]);
+      }
+    }
+    return { cell, grid };
+  }
+
+  lineCoverage(it, { cell, grid }) {
+    let hit = 0, n = 0;
+    for (const sp of it.subs) {
+      const P = sp.pts;
+      for (let i = 0; i < P.length; i++) {
+        n++;
+        const p = P[i];
+        const bucket = grid.get(`${Math.floor(p[0] / cell)},${Math.floor(p[1] / cell)}`);
+        if (!bucket) continue;
+        const q0 = P[Math.max(0, i - 1)], q1 = P[Math.min(P.length - 1, i + 1)];
+        let dx = q1[0] - q0[0], dy = q1[1] - q0[1];
+        const l = Math.hypot(dx, dy) || 1;
+        dx /= l; dy /= l;
+        for (const [a, b, ux, uy, len] of bucket) {
+          if (Math.abs(ux * dx + uy * dy) < COVER_COS) continue;
+          // רק מרחק ניצב: הנקודה צריכה להיות "מול" קטע הדיו, לא אחרי הסוף שלו — אחרת חצי קו קצר מכסה את כולו
+          const t = (p[0] - a[0]) * ux + (p[1] - a[1]) * uy;
+          if (t < -COVER_SLACK || t > len + COVER_SLACK) continue;
+          if (Math.abs((p[0] - a[0]) * uy - (p[1] - a[1]) * ux) <= COVER_TOL) { hit++; break; }
+        }
+      }
+    }
+    return { hit, n };
+  }
+
   letterReady(c) {
     let hit = 0, n = 0;
     for (const it of c.items) {
       if (it.kind === 'dot') { if (!it.touched) return false; continue; }
-      if (it.cov < STROKE_MIN) return false;
+      if (it.cov < STROKE_DONE) return false;
       hit += it.hit; n += it.n;
     }
     return !n || hit / n >= LETTER_DONE;
@@ -951,13 +1000,12 @@ export class Tracer {
   check(strokeEnded) {
     if (this.complete || !this.ready || !this.mask) return;
     const clusters = this.word.clusters;
-    const data = this.lowCtx().getImageData(0, 0, this.lw, this.lh).data;
+    const grid = this.inkGrid();
     for (const c of clusters) for (const it of c.items) {
       if (it.kind === 'dot') { if (!it.touched) it.touched = this.dotTouched(it); continue; }
-      let hit = 0;
-      for (const i of it.idx) if (i >= 0 && data[i] > 24) hit++;
-      it.hit = hit; it.n = it.idx.length;
-      it.cov = it.n ? hit / it.n : 1;
+      const { hit, n } = this.lineCoverage(it, grid);
+      it.hit = hit; it.n = n;
+      it.cov = n ? hit / n : 1;
     }
     const { total, ratio, length } = this.outsideRatio();
     const pathLen = this.word.pathLen || 0;
