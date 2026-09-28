@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E9EEF5">
+  <title>מעבדת דיבור</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@500;600;700&family=Rubik:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="lab.css">
+  <script type="module" src="lab.js"></script>
+</head>
+<body>
+
+  <header class="top">
+    <div class="brand">
+      <h1>מעבדת דיבור</h1>
+      <p class="brand-sub">השוואת מנועי הקראה וזיהוי דיבור · אותיות נפגשות</p>
+    </div>
+    <div id="env" class="chips" aria-live="polite"></div>
+  </header>
+  <p id="hint" class="hint" hidden></p>
+
+  <nav class="tabs" role="tablist" aria-label="לשוניות">
+    <button type="button" role="tab" data-tab="tts" aria-controls="tab-tts">הקראה</button>
+    <button type="button" role="tab" data-tab="stt" aria-controls="tab-stt">זיהוי</button>
+    <button type="button" role="tab" data-tab="results" aria-controls="tab-results">תוצאות</button>
+  </nav>
+
+  <main>
+    <section id="tab-tts" class="tab" role="tabpanel" hidden></section>
+    <section id="tab-stt" class="tab" role="tabpanel" hidden></section>
+    <section id="tab-results" class="tab" role="tabpanel" hidden></section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p class="hint">צריך JavaScript.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{
+  "_readme": "Copy to config.json (the server does it on first start). config.json is gitignored. Paths: ~ is expanded, relative paths are relative to lab/.",
+  "host": "127.0.0.1",
+  "port": 8766,
+  "data_dir": "data",
+  "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+  "venvs": {
+    "lab": "~/.venvs/otiyot-lab/bin/python",
+    "runpod": "~/.venvs/lecture-transcriber/bin/python"
+  },
+  "models_dir": "~/.cache/otiyot-lab",
+  "g2p": {
+    "phonikud_onnx": "~/.cache/otiyot-lab/phonikud/phonikud-1.0.int8.onnx",
+    "renikud_model": "~/.cache/huggingface/hub/models--notmax123--RenikudPlus/snapshots/*/model.onnx"
+  },
+  "tts": {
+    "say": {
+      "enabled": true,
+      "base_wpm": 180
+    },
+    "kokoro": {
+      "enabled": true,
+      "model": "~/.cache/otiyot-lab/kokoro/kokoro.onnx",
+      "voices": "~/.cache/otiyot-lab/kokoro/voices-hebrew.bin",
+      "vocab": "~/.cache/otiyot-lab/kokoro/config.json"
+    },
+    "bluetts": {
+      "enabled": true,
+      "repo": "~/.cache/otiyot-lab/BlueTTS",
+      "onnx_dir": "~/.cache/otiyot-lab/BlueTTS/onnx_models",
+      "steps": 5,
+      "seed": 1234,
+      "voices": [
+        { "id": "female", "name": "דוברת עברית (female)", "path": "onnx_models/voices/female.json" },
+        { "id": "noa", "name": "נועה (אישה)", "path": "voices/noa.json" },
+        { "id": "lily", "name": "לילי (אישה)", "path": "voices/lily.json" },
+        { "id": "adam", "name": "אדם (גבר)", "path": "voices/adam.json" },
+        { "id": "daniel", "name": "דניאל (גבר)", "path": "voices/daniel.json" }
+      ]
+    }
+  },
+  "stt": {
+    "trim_silence": true,
+    "runpod-ivrit": {
+      "enabled": true,
+      "env_file": "/Users/ilaish/Desktop/פרויקטים/תחומים/אישי/lecture-transcriber/.env",
+      "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+      "language": "he",
+      "mode": "ivrit",
+      "timeout_s": 300,
+      "cold_ms": 8000
+    },
+    "local-ivrit": {
+      "enabled": true,
+      "model": "mlx-community/ivrit-ai-whisper-large-v3-turbo-mlx",
+      "language": "he"
+    }
+  }
+}

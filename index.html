@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="אותיות">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#E9EEF5">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" href="icons/icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>אותיות נפגשות</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@500;600;700&family=Rubik:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/coloring.css">
+  <link rel="stylesheet" href="css/parent.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+
+  <!-- כניסה עם קוד המשפחה (להורה). בלי חיבור — זה המסך היחיד. app.js מחליט איזה מסך להציג -->
+  <section id="screen-login" class="screen" hidden aria-labelledby="login-title">
+    <div class="login-card">
+      <h1 id="login-title" class="login-name">אוֹתִיּוֹת נִפְגָּשׁוֹת</h1>
+      <p class="login-line">כניסה עם קוד המשפחה</p>
+
+      <div id="login-dots" class="login-dots" aria-hidden="true"></div>
+      <p id="login-count" class="sr-only" aria-live="polite"></p>
+
+      <div class="login-msg-row">
+        <p id="login-msg" role="status" aria-live="polite"></p>
+        <button id="login-retry" type="button" hidden>נסה שוב</button>
+      </div>
+
+      <div id="login-pad" class="login-pad" role="group" aria-label="מקלדת ספרות">
+        <button class="lg-key" type="button" data-digit="1">1</button>
+        <button class="lg-key" type="button" data-digit="2">2</button>
+        <button class="lg-key" type="button" data-digit="3">3</button>
+        <button class="lg-key" type="button" data-digit="4">4</button>
+        <button class="lg-key" type="button" data-digit="5">5</button>
+        <button class="lg-key" type="button" data-digit="6">6</button>
+        <button class="lg-key" type="button" data-digit="7">7</button>
+        <button class="lg-key" type="button" data-digit="8">8</button>
+        <button class="lg-key" type="button" data-digit="9">9</button>
+        <button id="login-go" class="lg-key lg-key--go" type="button" disabled>כניסה</button>
+        <button class="lg-key" type="button" data-digit="0">0</button>
+        <button id="login-del" class="lg-key lg-key--del" type="button" aria-label="מחיקת ספרה" disabled></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- מסך פתיחה -->
+  <section id="screen-start" class="screen" hidden>
+    <button id="btn-parent-start" class="gear" type="button" aria-label="אזור הורה — לחיצה ארוכה"></button>
+
+    <div class="start-card">
+      <h1 class="start-line app-name">אוֹתִיּוֹת נִפְגָּשׁוֹת</h1>
+      <p class="start-line hello">שָׁלוֹם<span id="child-name"></span></p>
+      <div class="start-action">
+        <button id="btn-start" type="button">בּוֹא נִקְרָא</button>
+      </div>
+      <p id="start-status" hidden></p>
+    </div>
+  </section>
+
+  <!-- מסך מילה -->
+  <section id="screen-word" class="screen" hidden>
+    <header class="topbar">
+      <div id="stars" class="stars" role="img" aria-label="התקדמות לציור"></div>
+      <div id="level-chip" class="level-chip"></div>
+      <button id="btn-parent" class="gear" type="button" aria-label="אזור הורה — לחיצה ארוכה"></button>
+    </header>
+
+    <main class="sheet">
+      <div id="trace-host"></div>
+      <div id="pic" hidden aria-hidden="true"></div>
+      <button id="btn-clear" type="button" aria-label="מחק ונסה שוב" hidden></button>
+      <div id="banner" role="status" hidden></div>
+      <p id="coach" aria-live="polite"></p>
+    </main>
+
+    <div class="controls">
+      <button id="btn-hear" class="ctl" type="button" aria-label="השמע את המילה"></button>
+      <button id="btn-mic" class="ctl is-locked" type="button" aria-label="מיקרופון — קרא בקול" disabled></button>
+      <button id="btn-next" class="ctl is-off" type="button" aria-label="המילה הבאה" disabled></button>
+    </div>
+
+    <div id="manual" hidden>
+      <span class="manual-label">אישור הורה</span>
+      <button id="manual-ok" type="button">קרא נכון</button>
+      <button id="manual-no" type="button">עוד לא</button>
+      <p id="manual-note"></p>
+    </div>
+
+    <div id="debug" hidden>
+      <input id="debug-text" type="text" dir="rtl" placeholder="מה נשמע" autocomplete="off" autocorrect="off" spellcheck="false">
+      <div class="debug-row">
+        <button id="debug-say" type="button">שמע</button>
+        <button id="debug-skip" type="button">דלג על מעבר</button>
+        <button id="debug-silence" type="button">שקט</button>
+      </div>
+      <p id="debug-state"></p>
+    </div>
+  </section>
+
+  <!-- פרס: בחירת דף צביעה (coloring.js) -->
+  <section id="screen-pick" class="screen" hidden></section>
+
+  <!-- פרס: צביעה (coloring.js) -->
+  <section id="screen-color" class="screen" hidden></section>
+
+  <!-- אזור הורה (parent.js) -->
+  <section id="screen-parent" class="screen" hidden></section>
+
+</body>
+</html>

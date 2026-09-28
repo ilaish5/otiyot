@@ -1,0 +1,331 @@
+/* פרס ציור: בחירת דף (#screen-pick) ומסך צביעה (#screen-color).
+   רק טוקנים מ-app.css דרך var(). הציור הוא הגיבור — הסרגל שקט. */
+
+#screen-pick,
+#screen-color {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* ---------- בחירת דף ---------- */
+.picker {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pick-head {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 940px;
+  margin-inline: auto;
+  padding-block: 4px 8px;
+}
+.pick-back {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  transition: transform .12s ease;
+}
+.pick-back .ic { width: 30px; height: 30px; }
+.pick-back:active { transform: scale(.94); }
+
+.pick-titles { min-width: 0; }
+.pick-title {
+  font-family: var(--font-word);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.pick-sub {
+  font-family: var(--font-word);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* אזור גלילה פנימי (המסך עצמו לא גולל). נכנס לריפוד של המסך כדי שהצללים לא ייחתכו */
+.pick-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  margin-inline: -16px;
+  padding: 8px 16px 24px;
+}
+.pick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 940px;   /* 3 עמודות גם לרוחב */
+  margin-inline: auto;
+}
+
+.pick-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 12px 12px 8px;
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  text-align: center;
+  transition: transform .12s ease;
+}
+.pick-card:active { transform: scale(.97); }
+
+.pick-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  border: 2px solid var(--guide-fill);
+  overflow: hidden;
+}
+.pick-thumb.is-blank { border: 3px dashed var(--line); }
+.pick-thumb svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.pick-name {
+  display: block;
+  font-family: var(--font-word);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+/* ---------- מסך צביעה ---------- */
+.c-root {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  container-type: size;   /* בשביל cqw/cqh למטה */
+}
+
+/* האזור הפנוי. ה-JS מודד אותו וקובע לבמה גודל 4:3 מדויק.
+   התקרה (4:3 של הרוחב) משאירה את הציור והסרגל צמודים ובמרכז, בלי חור ביניהם */
+.c-wrap {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  max-height: calc(100cqw * 3 / 4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-stage {
+  position: relative;
+  flex: none;
+  width: 0;
+  height: 0;
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+.c-stage > svg,
+.c-stage > canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+.c-lines { pointer-events: none; }
+.c-fills .r { transition: fill .15s ease; }
+
+/* ---------- סרגל כלים (לאורך: למטה, 2 שורות) ---------- */
+.c-bar {
+  flex: none;
+  display: grid;
+  align-items: center;
+  gap: 14px 16px;
+  grid-template-columns: auto auto 1fr auto auto;
+  grid-template-areas:
+    "tools sizes . undo done"
+    "pal   pal   pal pal  pal";
+}
+.c-tools { grid-area: tools; display: flex; gap: 8px; }
+.c-sizes { grid-area: sizes; display: flex; gap: 4px; transition: opacity .15s ease; }
+.c-sizes.is-off { visibility: hidden; opacity: 0; }   /* שומר מקום — הבמה לא קופצת */
+.c-palette {
+  grid-area: pal;
+  display: grid;
+  grid-template-columns: repeat(12, 50px);
+  gap: 10px;
+  justify-content: center;
+}
+.c-undo { grid-area: undo; }
+.c-done { grid-area: done; }
+
+.c-btn {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  color: var(--muted);
+  transition: transform .12s ease, background-color .15s ease, color .15s ease, border-color .15s ease, opacity .15s ease;
+}
+.c-btn .ic { width: 30px; height: 30px; }
+.c-btn.is-active {
+  background: var(--pencil-soft);
+  color: var(--pencil);
+  border-color: var(--pencil);
+}
+.c-btn:active:not(:disabled) { transform: scale(.94); }
+.c-btn:disabled { opacity: .35; }
+
+.c-size {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: background-color .15s ease, border-color .15s ease;
+}
+.c-size.is-active { background: var(--paper); border-color: var(--pencil); }
+.c-dot {
+  display: block;
+  width: var(--d);
+  height: var(--d);
+  border-radius: 50%;
+  background: var(--ink);
+}
+.c-size.is-active .c-dot { background: var(--pencil); }
+
+.c-swatch {
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.c-swatch.is-white { border-color: var(--line); }
+.c-swatch.is-active { box-shadow: 0 0 0 3px var(--ground), 0 0 0 6px var(--ink); }
+.c-swatch:active { transform: scale(.92); }
+
+.c-done {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-inline: 20px 26px;
+  border-radius: var(--radius-lg);
+  background: var(--go);
+  color: var(--paper);
+  box-shadow: var(--shadow);
+  font-family: var(--font-word);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: transform .12s ease, opacity .15s ease;
+}
+.c-done .ic { width: 30px; height: 30px; stroke-width: 2.5; }
+.c-done:active:not(:disabled) { transform: scale(.96); }
+.c-done.is-busy { opacity: .7; }
+
+/* לאורך, מסך צר (טלפון / iPad mini): 4 שורות, "סיימתי" לכל הרוחב */
+@media (orientation: portrait) and (max-width: 759px) {
+  .c-bar {
+    gap: 12px;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "tools undo"
+      "sizes sizes"
+      "pal   pal"
+      "done  done";
+  }
+  .c-palette { grid-template-columns: repeat(6, 48px); gap: 8px 10px; }
+  .c-swatch { width: 48px; height: 48px; }
+  .c-done { width: 100%; height: 64px; }
+}
+
+/* לרוחב: עמודה בצד ההתחלה (ימין), הבמה בשאר */
+@media (orientation: landscape) {
+  .c-root { flex-direction: row; gap: 24px; }
+  .c-wrap { max-height: none; max-width: calc(100cqh * 4 / 3); }
+  .c-bar {
+    order: -1;
+    align-self: center;
+    width: 256px;
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 8px;   /* מקום לטבעת של הצבע הנבחר */
+    gap: 20px 12px;
+    grid-template-columns: 64px 1fr;
+    grid-template-areas:
+      "tools tools"
+      "sizes sizes"
+      "pal   pal"
+      "undo  done";
+  }
+  .c-tools, .c-sizes { justify-content: space-between; }
+  .c-palette {
+    grid-template-columns: repeat(4, 52px);
+    gap: 12px 0;
+    justify-content: space-between;
+  }
+  .c-swatch { width: 52px; height: 52px; }
+  .c-done { width: 100%; padding-inline: 12px 14px; }
+}
+
+/* לרוחב ונמוך (טלפון): סרגל דחוס יותר — וגם אז הוא נגלל בתוך עצמו */
+@media (orientation: landscape) and (max-height: 560px) {
+  .c-bar { gap: 12px 10px; }
+  .c-palette { row-gap: 8px; }
+  .c-swatch { width: 48px; height: 48px; }
+  .c-palette { grid-template-columns: repeat(4, 48px); }
+  .c-done { height: 64px; }
+}
+
+@media (max-width: 480px) {
+  .pick-title { font-size: 34px; }
+  .pick-sub { font-size: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pick-card, .pick-back, .c-btn, .c-size, .c-swatch, .c-done, .c-sizes, .c-fills .r { transition: none; }
+  .pick-card:active, .pick-back:active, .c-btn:active:not(:disabled),
+  .c-swatch:active, .c-done:active:not(:disabled) { transform: none; }
+}

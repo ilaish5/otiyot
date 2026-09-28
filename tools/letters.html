@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>בדיקת אותיות מקווקוות</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@500;600;700&family=Rubik:wght@400;500;700&display=swap">
+  <!-- הטוקנים (צבעים, גופנים) וסגנון הקנבסים של המעבר — מהאפליקציה עצמה -->
+  <link rel="stylesheet" href="../css/app.css">
+  <style>
+    html, body { height: auto; }
+    body {
+      overflow: auto;
+      overscroll-behavior: auto;
+      padding: 0 max(16px, env(safe-area-inset-right)) 64px max(16px, env(safe-area-inset-left));
+    }
+
+    .bar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 16px;
+      padding: max(14px, env(safe-area-inset-top)) 0 14px;
+      background: var(--ground);
+      border-bottom: 1px solid var(--line);
+    }
+    .bar h1 {
+      font-family: var(--font-word);
+      font-weight: 700;
+      font-size: 24px;
+      margin-inline-end: auto;
+    }
+    .tools { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tools button, .card .rev {
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      background: var(--paper);
+      box-shadow: inset 0 0 0 1.5px var(--line);
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--ink);
+    }
+    .tools button[aria-pressed="true"] {
+      background: var(--pencil-soft);
+      color: var(--pencil);
+      box-shadow: inset 0 0 0 1.5px var(--pencil);
+    }
+    .tools button:active, .card .rev:active { transform: scale(.97); }
+
+    .intro {
+      max-width: 70ch;
+      margin: 16px 0 4px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    #status { margin: 6px 0 0; font-size: 15px; color: var(--muted); }
+    #status .bad { color: var(--danger); font-weight: 500; }
+    #status .good { color: var(--go); font-weight: 500; }
+
+    section { margin-top: 28px; }
+    section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 0 0 12px;
+      font-family: var(--font-word);
+      font-weight: 700;
+      font-size: 20px;
+    }
+    section h2 .sub { font-family: var(--font-ui); font-weight: 400; font-size: 15px; color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 14px;
+    }
+    .grid.small { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    body.big .grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 560px), 1fr)); }
+    body.big .grid.small { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--paper);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: box-shadow .2s;
+    }
+    .card.is-done { box-shadow: 0 0 0 3px var(--go), var(--shadow); }
+    .card.is-messy { box-shadow: 0 0 0 3px var(--mic), var(--shadow); }
+    .host { position: relative; height: 190px; }
+    .small .host { height: 150px; }
+    body.big .host { height: 340px; }
+    body.big .small .host { height: 240px; }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 60px;
+      padding: 8px 10px 8px 12px;
+      border-top: 1px solid var(--line);
+    }
+    .meta .word { font-family: var(--font-word); font-weight: 600; font-size: 26px; line-height: 1; }
+    .meta .pic { font-size: 22px; line-height: 1; }
+    .meta .id { direction: ltr; font-size: 13px; color: var(--muted); margin-inline-end: auto; }
+    .small .meta { flex-wrap: wrap; gap: 4px 8px; }
+    .small .meta .id { font-size: 12px; }
+    .card .rev { min-height: 40px; padding: 0 14px; font-size: 15px; }
+    .card.is-revealed .rev { background: var(--pencil-soft); color: var(--pencil); box-shadow: inset 0 0 0 1.5px var(--pencil); }
+    .card.missing .word { color: var(--danger); }
+
+    @media (max-width: 480px) {
+      .bar h1 { font-size: 20px; width: 100%; }
+      .grid { grid-template-columns: 1fr; }
+      .grid.small { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <h1>אוֹתִיּוֹת מְקֻוְקָווֹת — בְּדִיקָה</h1>
+    <div class="tools">
+      <button id="all-show" type="button">גלה הכול</button>
+      <button id="all-hide" type="button">הסתר הכול</button>
+      <button id="order" type="button" aria-pressed="false">סדר כתיבה</button>
+      <button id="big" type="button" aria-pressed="false">גדול</button>
+    </div>
+  </header>
+
+  <p class="intro">
+    כל מילה כמו שהילד רואה אותה: כל אות היא קו מקווקו אחד, הניקוד — קווים ונקודות.
+    הנקודה הירוקה והחץ מראים איפה מתחילים ולאן. אפשר לעבור עם העט על כל מילה כאן (מסגרת ירוקה = הושלמה).
+    "סדר כתיבה" ממספר את הקווים של כל אות.
+  </p>
+  <p id="status">טוען…</p>
+
+  <main id="sections"></main>
+
+  <script type="module">
+    import { LEVELS, BASE_WORDS } from '../js/words.js';
+    import { Tracer, loadLetters } from '../js/trace-line.js';
+
+    const U = (...cps) => String.fromCodePoint(...cps);
+    const ALPHABET = [...'אבגדהוזחטיכךלמםנןסעפףצץקרשת'];
+    // [טקסט, שם] — כל סימן ניקוד על אות ניטרלית
+    const NIKUD = [
+      [['ב', 0x05B7], 'פַּתַח'], [['ב', 0x05B8], 'קָמָץ'], [['ב', 0x05C7], 'קָמָץ קָטָן'],
+      [['ב', 0x05B5], 'צֵירֵה'], [['ב', 0x05B6], 'סֶגּוֹל'], [['ב', 0x05B4], 'חִירִיק'],
+      [['ב', 0x05B9], 'חוֹלָם'], [['ב', 0x05BB], 'קֻבּוּץ'], [['ב', 0x05B0], 'שְׁוָא'],
+      [['א', 0x05B2], 'חֲטַף פַּתַח'], [['א', 0x05B1], 'חֲטַף סֶגּוֹל'], [['א', 0x05B3], 'חֲטַף קָמָץ'],
+      [['ב', 0x05BC], 'דָּגֵשׁ'], [['ש', 0x05C1], 'שִׁין'], [['ש', 0x05C2], 'שִׂין'],
+      [['ו', 0x05BC], 'שׁוּרוּק'], [['ו', 0x05B9], 'חוֹלָם מָלֵא'], [['ק', 0x05B8], 'ק + קָמָץ'],
+      [['ך', 0x05B0], 'ךְ סוֹפִית'], [['ש', 0x05BC, 0x05C1, 0x05B6], 'דָּגֵשׁ + שִׁין + סֶגּוֹל'],
+    ].map(([[b, ...m], name]) => [b + U(...m), name]);
+    const MARK_CPS = [0x05B7, 0x05B8, 0x05C7, 0x05B5, 0x05B6, 0x05B4, 0x05B9, 0x05BB, 0x05B0, 0x05B2, 0x05B1, 0x05B3, 0x05BC, 0x05C1, 0x05C2];
+
+    const $ = (id) => document.getElementById(id);
+    const cssVar = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+    const state = { revealed: false, order: false };
+    const cards = [];
+
+    const lib = await loadLetters();
+    const LET = lib.LETTERS || {};
+    const MK = lib.MARKS || {};
+
+    // מה חסר ב-letters.js
+    const missingL = ALPHABET.filter((ch) => !LET[ch] || !Array.isArray(LET[ch].strokes));
+    const missingM = MARK_CPS.filter((cp) => !MK[U(cp)]).map((cp) => 'U+' + cp.toString(16).toUpperCase().padStart(4, '0'));
+    const st = $('status');
+    st.textContent = '';
+    const part = (text, cls) => { const s = document.createElement('span'); s.textContent = text; if (cls) s.className = cls; st.append(s); };
+    if (!lib.LETTERS) part('js/letters.js לא נטען — האותיות מוצגות מהגופן, בלי קווים.', 'bad');
+    else {
+      part(`letters.js: ${ALPHABET.length - missingL.length}/${ALPHABET.length} אותיות, ${MARK_CPS.length - missingM.length}/${MARK_CPS.length} סימני ניקוד. `, missingL.length || missingM.length ? '' : 'good');
+      if (missingL.length) part(`חסרות: ${missingL.join(' ')}. `, 'bad');
+      if (missingM.length) part(`סימנים חסרים: ${missingM.join(' ')}. `, 'bad');
+      part(typeof lib.markPlacement === 'function' ? 'markPlacement ✓' : 'אין markPlacement — מיקום ברירת מחדל.');
+    }
+
+    // ---------- כרטיסים ----------
+    // Tracer רק לכרטיסים ליד המסך: כל כרטיס הוא 2 קנבסים ברזולוציית מסך, ו-Safari באייפד מגביל את
+    // זיכרון הקנבסים בדף (במצב "גדול" 89 כרטיסים עוברים את התקרה והקנבסים נהיים ריקים). כרטיס שיצא רחוק — נהרס.
+    const lazy = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        const card = e.target.card;
+        if (e.isIntersecting) { if (!card.tracer) start(card); }
+        else if (card.tracer) stop(card);
+      }
+    }, { rootMargin: '600px 0px' });
+
+    function makeCard(grid, { text, label, sub, id, small, missing }) {
+      const el = document.createElement('article');
+      el.className = 'card' + (missing ? ' missing' : '');
+      el.innerHTML = `<div class="host"></div>
+        <footer class="meta"><span class="word"></span><span class="pic"></span><span class="id"></span>
+        <button class="rev" type="button">גלה</button></footer>`;
+      el.querySelector('.word').textContent = label ?? text;
+      el.querySelector('.pic').textContent = sub ?? '';
+      el.querySelector('.id').textContent = id ?? '';
+      const card = { el, text, host: el.querySelector('.host'), tracer: null, revealed: false, small };
+      el.card = card;
+      el.querySelector('.rev').addEventListener('click', () => setRevealed(card, !card.revealed));
+      grid.append(el);
+      cards.push(card);
+      lazy.observe(el);
+      return card;
+    }
+
+    async function start(card) {
+      const t = new Tracer(card.host, {
+        showOrder: state.order,
+        margin: !card.small,
+        onComplete: () => {
+          card.el.classList.add('is-done');
+          t.reveal(cssVar('--pencil'));
+        },
+        onMessy: () => {
+          card.el.classList.add('is-messy');
+          t.enabled = false;
+          setTimeout(() => {
+            card.el.classList.remove('is-messy');
+            if (card.tracer !== t) return; // הכרטיס נהרס בינתיים
+            t.restart();
+            t.enabled = true;
+          }, 900);
+        },
+      });
+      card.tracer = t;
+      await t.setWord(card.text);
+      if (card.tracer === t && card.revealed) t.reveal(cssVar('--pencil'));
+    }
+
+    function stop(card) {
+      card.tracer.destroy();
+      card.tracer = null;
+      card.el.classList.remove('is-done', 'is-messy');
+    }
+
+    function setRevealed(card, on) {
+      card.revealed = on;
+      card.el.classList.toggle('is-revealed', on);
+      card.el.querySelector('.rev').textContent = on ? 'הסתר' : 'גלה';
+      if (!on) card.el.classList.remove('is-done');
+      const t = card.tracer;
+      if (!t) return;
+      if (on) t.reveal(cssVar('--pencil'));
+      else t.restart();
+    }
+
+    function section(title, sub, small) {
+      const s = document.createElement('section');
+      const h = document.createElement('h2');
+      h.textContent = title;
+      if (sub) { const span = document.createElement('span'); span.className = 'sub'; span.textContent = sub; h.append(span); }
+      const grid = document.createElement('div');
+      grid.className = 'grid' + (small ? ' small' : '');
+      s.append(h, grid);
+      $('sections').append(s);
+      return grid;
+    }
+
+    for (const lv of LEVELS) {
+      const words = BASE_WORDS.filter((w) => (Number(w.level) || 1) === lv.id);
+      if (!words.length) continue;
+      const grid = section(`שָׁלָב ${lv.id} · ${lv.name}`, `${words.length} מילים`);
+      for (const w of words) makeCard(grid, { text: w.text, sub: w.pic, id: w.id });
+    }
+    const other = BASE_WORDS.filter((w) => !LEVELS.some((lv) => lv.id === (Number(w.level) || 1)));
+    if (other.length) {
+      const grid = section('מילים נוספות');
+      for (const w of other) makeCard(grid, { text: w.text, sub: w.pic, id: w.id });
+    }
+
+    const lettersGrid = section('כָּל הָאוֹתִיּוֹת', 'השוואה לגופן: האות בתחתית הכרטיס', true);
+    for (const ch of ALPHABET) makeCard(lettersGrid, { text: ch, id: `U+${ch.codePointAt(0).toString(16).toUpperCase()}`, small: true, missing: missingL.includes(ch) });
+
+    const nikudGrid = section('נִקּוּד', 'קווים — קו אחד, נקודות — נוגעים', true);
+    for (const [text, name] of NIKUD) makeCard(nikudGrid, { text, id: name, small: true });
+
+    // ---------- כפתורים ----------
+    $('all-show').addEventListener('click', () => { for (const c of cards) setRevealed(c, true); });
+    $('all-hide').addEventListener('click', () => { for (const c of cards) setRevealed(c, false); });
+    $('order').addEventListener('click', (e) => {
+      state.order = !state.order;
+      e.currentTarget.setAttribute('aria-pressed', String(state.order));
+      for (const c of cards) if (c.tracer) { c.tracer.showOrder = state.order; c.tracer.redraw(); }
+    });
+    $('big').addEventListener('click', (e) => {
+      const on = document.body.classList.toggle('big');
+      e.currentTarget.setAttribute('aria-pressed', String(on));
+    });
+
+    // לבדיקות אוטומטיות
+    window.__letters = { cards, lib };
+  </script>
+</body>
+</html>
