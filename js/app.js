@@ -26,6 +26,9 @@ const STR = {
   levelUp: 'שָׁלָב חָדָשׁ!',
   reward: 'הִגִּיעַ הַזְּמַן לְצַיֵּר!',
   level: 'שָׁלָב',
+  confirmQ: 'לִמְחֹק?',
+  yes: 'כֵּן',
+  no: 'לֹא',
 };
 // מילות עידוד שמושמעות (לא מוצגות)
 const PRAISE = ['כל הכבוד', 'יופי', 'מעולה'];
@@ -82,6 +85,7 @@ const ICONS = {
   star: '<path fill="currentColor" d="M12 2.8l2.7 5.7 6.2.8-4.5 4.3 1.1 6.1L12 16.8l-5.5 2.9 1.1-6.1-4.5-4.3 6.2-.8z"/>',
   dot: '<circle cx="12" cy="12" r="8.5" stroke-width="2.4" stroke-dasharray="0.1 4.35"/>',
   backspace: '<path d="M9 5h11v14H9l-6-7z"/><path d="M11.5 9.5l5 5"/><path d="M16.5 9.5l-5 5"/>',
+  keep: '<path d="M9 14l-4-4 4-4"/><path d="M5 10h9.5a4.5 4.5 0 0 1 0 9H11"/>',
 };
 const icon = (name, cls = '') =>
   `<svg class="ic${cls ? ' ' + cls : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${ICONS[name]}</svg>`;
@@ -97,6 +101,8 @@ const el = {
   manual: $('manual'), manualOk: $('manual-ok'), manualNo: $('manual-no'), manualNote: $('manual-note'),
   debug: $('debug'), debugText: $('debug-text'), debugSay: $('debug-say'), debugSkip: $('debug-skip'),
   debugSilence: $('debug-silence'), debugState: $('debug-state'),
+  vu: $('vu'), confirm: $('confirm'), confirmQ: $('confirm-q'), confirmYes: $('confirm-yes'), confirmNo: $('confirm-no'),
+  wordScreen: $('screen-word'),
   pickScreen: $('screen-pick'), colorScreen: $('screen-color'), parentScreen: $('screen-parent'),
   login: $('screen-login'), loginDots: $('login-dots'), loginCount: $('login-count'), loginMsg: $('login-msg'),
   loginRetry: $('login-retry'), loginDel: $('login-del'), loginGo: $('login-go'),
@@ -105,7 +111,12 @@ const el = {
 
 el.loginDel.innerHTML = icon('backspace');
 el.hear.innerHTML = icon('speaker');
-el.mic.innerHTML = icon('mic');
+el.mic.innerHTML = icon('mic')
+  + '<svg class="rec-ring" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="47"/></svg>'
+  + '<span class="rec-dot" aria-hidden="true"></span>';
+el.confirmQ.textContent = STR.confirmQ;
+el.confirmYes.innerHTML = `${icon('eraser')}<span>${STR.yes}</span>`;
+el.confirmNo.innerHTML = `${icon('keep')}<span>${STR.no}</span>`;
 el.next.innerHTML = icon('arrowLeft', 'ic-arrow') + icon('brush', 'ic-brush');
 el.clear.innerHTML = icon('eraser');
 el.gear.innerHTML = gearButton();
@@ -210,6 +221,16 @@ function setMic(mode) { // locked | ready | listening
   // נעול = aria-disabled ולא disabled, כדי שנגיעה בו תקבל תגובה ("קודם עוברים על הקווים")
   el.mic.disabled = mode === 'listening';
   el.mic.setAttribute('aria-disabled', String(mode !== 'ready'));
+  // מצב הקלטה בולט: מסגרת אדומה לדף, פסי קול, טבעת שמתרוקנת במשך זמן ההקשבה
+  const rec = mode === 'listening';
+  el.wordScreen.classList.toggle('is-rec', rec);
+  el.vu.classList.remove('is-hearing');
+  el.mic.classList.remove('is-counting');
+  if (rec) {
+    el.mic.style.setProperty('--listen-ms', `${LISTEN_MS}ms`);
+    void el.mic.offsetWidth; // מתחילים את הטבעת מלאה
+    el.mic.classList.add('is-counting');
+  }
 }
 
 let nudgeTimer = null;
@@ -414,7 +435,7 @@ function startListening() {
     stopListening();
     handleHeard({ error: 'no-speech' });
   }, LISTEN_MS + 7000);
-  listen({ maxMs: LISTEN_MS }).then((res) => {
+  listen({ maxMs: LISTEN_MS, onSpeech: () => { if (my === listenSeq) el.vu.classList.add('is-hearing'); } }).then((res) => {
     clearTimeout(guard);
     if (my !== listenSeq) return;
     handleHeard(res || { error: 'no-speech' });
@@ -987,13 +1008,30 @@ el.start.addEventListener('click', async () => {
   loadWord();
 });
 
-el.clear.addEventListener('click', () => {
+// מחיקה רק אחרי אישור — הכפתור בפינה, וקל לגעת בו בטעות עם כף היד
+let confirmTimer = null;
+function closeConfirm(erase) {
+  if (el.confirm.hidden) return;
+  clearTimeout(confirmTimer);
+  el.confirm.hidden = true;
+  window.speechSynthesis?.cancel();
   if (state !== 'trace') return;
-  clearTimeout(messyTimer);
-  tracer.restart();
+  if (erase) {
+    clearTimeout(messyTimer);
+    tracer.restart();
+    coach(STR.trace);
+  }
   tracer.enabled = true;
-  coach(STR.trace);
+}
+el.clear.addEventListener('click', () => {
+  if (state !== 'trace' || !el.confirm.hidden) return;
+  tracer.enabled = false; // שלא יצייר מתחת לחלון
+  el.confirm.hidden = false;
+  say('האם למחוק?', settings.speechRate);
+  confirmTimer = setTimeout(() => closeConfirm(false), 8000); // בלי תשובה — לא מוחקים
 });
+el.confirmYes.addEventListener('click', () => { tick(); closeConfirm(true); });
+el.confirmNo.addEventListener('click', () => closeConfirm(false));
 
 el.hear.addEventListener('click', () => {
   if (!word) return;

@@ -34,7 +34,7 @@ export function say(text, rate = 0.75) {
 // ---------- זיהוי דיבור ----------
 // מחזיר { alternatives: string[] } או { error: 'no-speech' | 'not-allowed' | 'network' | ... }
 let active = null;
-export function listen({ onStart, onInterim, maxMs = 5000 } = {}) {
+export function listen({ onStart, onInterim, onSpeech, maxMs = 5000 } = {}) {
   if (!SR) return Promise.resolve({ error: 'unsupported' });
   stopListening();
   return new Promise((resolve) => {
@@ -48,6 +48,8 @@ export function listen({ onStart, onInterim, maxMs = 5000 } = {}) {
     let error = null;
     let timer;
     rec.onstart = () => { onStart?.(); timer = setTimeout(() => rec.stop(), maxMs); };
+    // לא כל דפדפן שולח את האירועים האלה; אם לא — פשוט אין חיווי "שומע"
+    rec.onsoundstart = rec.onspeechstart = () => onSpeech?.();
     rec.onresult = (e) => {
       for (let i = 0; i < e.results.length; i++) {
         for (let j = 0; j < e.results[i].length; j++) {
