@@ -207,7 +207,22 @@ function setMic(mode) { // locked | ready | listening
   el.mic.classList.toggle('is-locked', mode === 'locked');
   el.mic.classList.toggle('is-ready', mode === 'ready');
   el.mic.classList.toggle('is-listening', mode === 'listening');
-  el.mic.disabled = mode !== 'ready';
+  // נעול = aria-disabled ולא disabled, כדי שנגיעה בו תקבל תגובה ("קודם עוברים על הקווים")
+  el.mic.disabled = mode === 'listening';
+  el.mic.setAttribute('aria-disabled', String(mode !== 'ready'));
+}
+
+let nudgeTimer = null;
+function nudgeLocked() {
+  if (state !== 'trace') return;
+  softBoop();
+  el.mic.classList.remove('is-nudge');
+  void el.mic.offsetWidth; // מאפשר להפעיל את האנימציה שוב
+  el.mic.classList.add('is-nudge');
+  coach(STR.trace, 'hint');
+  clearTimeout(nudgeTimer);
+  nudgeTimer = setTimeout(() => { el.mic.classList.remove('is-nudge'); el.coach.dataset.tone = ''; }, 900);
+  say('קודם עוברים על הקווים', settings.speechRate);
 }
 
 function setNext(mode, reward = false) { // off | on
@@ -385,6 +400,7 @@ function enterRead() {
 }
 
 function startListening() {
+  if (state === 'trace') return nudgeLocked();
   if (state !== 'read') return;
   window.speechSynthesis?.cancel(); // שהזיהוי לא ישמע את ההקראה
   const my = ++listenSeq;
@@ -560,17 +576,36 @@ function swallowReleaseClick() {
   setTimeout(release, 5000);
 }
 
+// לחיצה קצרה על הגלגל: רמז להורה שצריך להחזיק
+let gearHint = null;
+function showGearHint(btn) {
+  gearHint?.remove();
+  const r = btn.getBoundingClientRect();
+  gearHint = document.createElement('div');
+  gearHint.className = 'gear-hint';
+  gearHint.textContent = 'להחזיק לחוץ 2 שניות — אזור הורים';
+  gearHint.style.top = `${r.bottom + 8}px`;
+  gearHint.style.left = `${Math.max(8, r.left)}px`;
+  document.body.append(gearHint);
+  const h = gearHint;
+  setTimeout(() => { h.classList.add('is-out'); setTimeout(() => h.remove(), 300); }, 2200);
+}
+
 function holdGate(btn) {
   let timer = null;
-  const cancel = () => {
+  let downAt = 0;
+  const cancel = (e) => {
+    const wasHolding = !!timer;
     clearTimeout(timer);
     timer = null;
     btn.classList.remove('is-holding');
+    if (wasHolding && e?.type === 'pointerup' && performance.now() - downAt < HOLD_MS) showGearHint(btn);
   };
   btn.addEventListener('pointerdown', (e) => {
     if (timer || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    downAt = performance.now();
     btn.classList.add('is-holding');
-    timer = setTimeout(() => { cancel(); swallowReleaseClick(); openParentArea(); }, HOLD_MS);
+    timer = setTimeout(() => { timer = null; btn.classList.remove('is-holding'); gearHint?.remove(); swallowReleaseClick(); openParentArea(); }, HOLD_MS);
   });
   for (const ev of ['pointerup', 'pointerleave', 'pointercancel']) btn.addEventListener(ev, cancel);
   btn.addEventListener('contextmenu', (e) => e.preventDefault());

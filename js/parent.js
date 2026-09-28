@@ -19,7 +19,11 @@ const TABS = [
   { id: 'words', label: 'מילים' },
   { id: 'drawings', label: 'ציורים' },
   { id: 'settings', label: 'הגדרות' },
+  { id: 'lab', label: 'מעבדה' },
 ];
+
+const LAB_URL = 'http://127.0.0.1:8766/lab/';
+const LAB_CMD = 'cd "/Users/ilaish/Desktop/פרויקטים/תחומים/אישי/reading=learning" && python3 lab/server.py';
 
 const OUTCOMES = { solo: 'קרא לבד', heard: 'אחרי ששמע', skipped: 'דילג' };
 
@@ -370,7 +374,26 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
     if (v !== (s.settings.childName || '')) persist({ childName: v });
   }
 
-  const RENDER = { progress: renderProgress, words: renderWords, drawings: renderDrawings, settings: renderSettings };
+  // מעבדת הקול רצה על המק בלבד (שרת מקומי + מודלים), לכן כאן רק הסבר וקישור
+  function renderLab() {
+    const onIpad = /iPad|iPhone/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const cmd = h('code', { class: 'p-code', dir: 'ltr' }, LAB_CMD);
+    const copy = h('button', { type: 'button', class: 'p-btn p-btn--ghost p-btn--sm' }, h('span', { class: 'p-btn-label' }, 'העתק פקודה'));
+    copy.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(LAB_CMD); copy.lastChild.textContent = 'הועתק'; }
+      catch { getSelection().selectAllChildren(cmd); }
+    });
+    const open = h('a', { class: 'p-btn p-btn--primary', href: LAB_URL, target: '_blank', rel: 'noopener' }, h('span', { class: 'p-btn-label' }, 'פתיחת המעבדה'));
+    return card('מעבדת קול',
+      note('משווים מנועי הקראה וזיהוי דיבור על הקול של הילד: הוא קורא מילה, אתה מסמן אם קרא נכון, והמעבדה מראה איזה מנוע צדק.'),
+      onIpad ? note('המעבדה רצה על המק בלבד (שרת מקומי ומודלים). פתח אותה מהמק.', 'error') : null,
+      h('p', { class: 'p-muted' }, '1. בטרמינל במק:'),
+      cmd, copy,
+      h('p', { class: 'p-muted' }, '2. ב-Safari במק (אותו מנוע זיהוי של אפל כמו באייפד):'),
+      onIpad ? h('code', { class: 'p-code', dir: 'ltr' }, LAB_URL) : open);
+  }
+
+  const RENDER = { progress: renderProgress, words: renderWords, drawings: renderDrawings, settings: renderSettings, lab: renderLab };
 
   async function showTab(id) {
     const token = ++s.seq;

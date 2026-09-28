@@ -377,6 +377,21 @@ svg.ic { display: block; flex: none; width: 24px; height: 24px; }
   50%      { opacity: .35; }
 }
 
+/* רמז ללחיצה קצרה על הגלגל */
+.gear-hint {
+  position: fixed;
+  z-index: 50;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper);
+  font: 500 14px/1.3 var(--font-ui);
+  box-shadow: var(--shadow);
+  pointer-events: none;
+  transition: opacity .3s;
+}
+.gear-hint.is-out { opacity: 0; }
+
 /* ---------- מסך מילה ---------- */
 #screen-word { gap: 12px; }
 
@@ -579,6 +594,8 @@ svg.ic { display: block; flex: none; width: 24px; height: 24px; }
   color: var(--guide);
   box-shadow: inset 0 0 0 2px var(--line);
 }
+#btn-mic.is-nudge { animation: lg-shake .45s ease-out; }
+#coach[data-tone="hint"] { color: var(--pencil); }
 #btn-mic.is-ready::before {
   border: 4px solid var(--mic);
   animation: ring-soft 2.4s ease-out infinite;

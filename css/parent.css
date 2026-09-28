@@ -928,3 +928,17 @@
   }
   .p-btn:active:not(:disabled) { transform: none; }
 }
+
+/* מעבדה: פקודה להעתקה */
+#screen-parent .p-code {
+  display: block;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--ground);
+  color: var(--ink);
+  font: 13px/1.5 ui-monospace, Menlo, monospace;
+  overflow-wrap: anywhere;
+  user-select: text;
+  -webkit-user-select: text;
+}
+#screen-parent a.p-btn { text-decoration: none; }
