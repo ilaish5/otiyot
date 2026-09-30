@@ -552,7 +552,7 @@ export class Tracer {
     const guide = v('--guide');
     return {
       rule: v('--rule'), margin: v('--margin'), guide, pencil: v('--pencil'),
-      go: v('--go'), order: v('--mic'), strong: mix(guide, v('--ink'), 0.35),
+      go: v('--go'), order: v('--mic'), strong: mix(guide, v('--ink'), 0.35), ink: v('--ink'),
     };
   }
 
@@ -566,7 +566,8 @@ export class Tracer {
   }
 
   firstOpenItem(c) {
-    return c.items.findIndex((it) => (it.kind === 'dot' ? !it.touched : it.cov < STROKE_DONE));
+    // ניקוד לא צריך לעבור עליו — נקודת ההתחלה רק על קווי האות
+    return c.items.findIndex((it) => !it.mark && (it.kind === 'dot' ? !it.touched : it.cov < STROKE_DONE));
   }
 
   get ready() { return !!this.word && !!this.s && this.layoutFor === this.word; }
@@ -625,8 +626,11 @@ export class Tracer {
 
   paintGuide(g, c, color, k = 1) {
     const lw = this.clampU(GUIDE_W, 2, 10) * k;
+    const marks = c.items.filter((it) => it.mark);
+    if (marks.length) this.paintSolid(g, { items: marks }, this.colors().ink);
     g.strokeStyle = color; g.fillStyle = color; g.lineWidth = lw;
     for (const it of c.items) {
+      if (it.mark) continue;
       if (it.kind === 'dot') {
         g.setLineDash([]);
         g.beginPath(); g.arc(it.x, it.y, Math.max(GUIDE_DOT, this.px(2.5)) * k, 0, Math.PI * 2); g.fill();
@@ -990,6 +994,7 @@ export class Tracer {
   letterReady(c) {
     let hit = 0, n = 0;
     for (const it of c.items) {
+      if (it.mark) continue; // ניקוד מוצג מודפס, לא חובה לעבור עליו
       if (it.kind === 'dot') { if (!it.touched) return false; continue; }
       if (it.cov < STROKE_DONE) return false;
       hit += it.hit; n += it.n;

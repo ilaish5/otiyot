@@ -1,17 +1,21 @@
 // המעטפת: מסך כניסה (קוד המשפחה), מסך פתיחה, לולאת מילה (מעבר עם העט → קריאה בקול → הבא),
 // פרס ציור ושער הורה.
 
-import { LEVELS, BASE_WORDS } from './words.js';
+import { BASE_WORDS, stageOfStation } from './words.js';
 import {
   DEFAULT_SETTINGS, getSettings, saveSettings, getKV, setKV, listCustomWords,
   getAllStats, recordWord, saveDrawing, requestPersist,
 } from './db.js';
+import {
+  withStation, needsMigration, placeCustom, pickNext, nextStation, levelInfo, stationInfo,
+} from './progress.js';
 import { canListen, hasHebrewVoice, say, listen, stopListening, matches, chime, softBoop, tick } from './speech.js';
 import { Tracer } from './trace-line.js';
 import { renderPicker, Colorer } from './coloring.js';
 import { openParent } from './parent.js';
 import { initCloud, isReady, getSession, signIn, onAuthChange } from './cloud.js';
 import { startSync, syncNow, onStatus } from './sync.js';
+import { canRecord, startRecording, stopRecording, uploadAttempt } from './recorder.js';
 
 // טקסט לילד — מנוקד, בדיוק כפי שאושר
 const STR = {
@@ -24,6 +28,7 @@ const STR = {
   skipped: 'לֹא נוֹרָא! מַמְשִׁיכִים',
   messy: 'נַסֵּה לַעֲבֹר בְּדִיּוּק עַל הַקַּוִּים',
   levelUp: 'שָׁלָב חָדָשׁ!',
+  newStation: 'תַּחֲנָה חֲדָשָׁה!',
   reward: 'הִגִּיעַ הַזְּמַן לְצַיֵּר!',
   level: 'שָׁלָב',
   confirmQ: 'לִמְחֹק?',
@@ -32,6 +37,8 @@ const STR = {
 };
 // מילות עידוד שמושמעות (לא מוצגות)
 const PRAISE = ['כל הכבוד', 'יופי', 'מעולה'];
+// מושמע כשעוברים לתחנה חדשה באותו שלב (הטקסט המוצג: STR.newStation)
+const SAY_NEW_STATION = 'תחנה חדשה';
 
 // מסך הכניסה — להורה, בלי ניקוד
 const LOGIN_MSG = {
@@ -51,14 +58,12 @@ const FIRST_SYNC_MS = 3000;
 
 const SCREENS = ['screen-login', 'screen-start', 'screen-word', 'screen-pick', 'screen-color', 'screen-parent'];
 const HOLD_MS = 1500;
-const LISTEN_MS = 5000;
+const LISTEN_MS = 7000; // עד 7 שניות; נגמר קודם אחרי שקט (speech.js)
 const DEBUG = new URLSearchParams(location.search).has('debug');
 
 const $ = (id) => document.getElementById(id);
 const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const pickOne = (arr) => arr[Math.floor(Math.random() * arr.length)];
-const shuffle = (arr) => arr.map((v) => [Math.random(), v]).sort((a, b) => a[0] - b[0]).map((p) => p[1]);
-const levelOf = (w) => Number(w.level) || 1;
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 // שמירה או טעינה שנתקעה (IndexedDB, או שרת בעתיד) לא תשאיר את הילד בלי "הבא"
 const timed = (p, ms = 3000) => Promise.race([p, new Promise((_, no) => setTimeout(() => no(new Error('db timeout')), ms))]);
@@ -133,9 +138,12 @@ let word = null;
 let state = 'idle'; // idle | loading | trace | read | listening | done | reward | parent
 let attempts = 0;
 let heardBeforeRead = false;
+let tries = 0;            // ניסיונות הקראה שהסתיימו במילה הנוכחית — ההשמעה נפתחת אחרי הראשון
 let transcripts = [];
 let recent = [];          // 3 המילים האחרונות שהוצגו
-let bannerPending = false;
+let turn = 0;             // כמה מילים הוצגו בהפעלה הזו (כל מילה רביעית — חזרה על מילה שנכשלה)
+let bannerPending = null; // null | 'stage' (שלב חדש) | 'station' (תחנה חדשה באותו שלב)
+let migrationSaved = false;
 let loadSeq = 0;          // עולה בכל החלפת מילה — מבטל טיימרים ותוצאות ישנים
 let listenSeq = 0;        // עולה בכל האזנה / ביטול האזנה
 let started = false;
@@ -165,9 +173,9 @@ function show(id) {
 const currentScreen = () => SCREENS.find((s) => !$(s).hidden) || 'screen-start';
 
 // ---------- נתונים ----------
+// station = המקום של הילד (תחנה גלובלית). level = השלב של התחנה, נגזר (לקוד ישן ולשורת הענן)
 function normSettings(s) {
-  const out = { ...DEFAULT_SETTINGS, ...(s || {}) };
-  out.level = Math.min(LEVELS.length, Math.max(1, Math.round(Number(out.level)) || 1));
+  const out = withStation({ ...DEFAULT_SETTINGS, ...(s || {}) });
   out.wordsPerReward = Math.max(1, Math.round(Number(out.wordsPerReward)) || DEFAULT_SETTINGS.wordsPerReward);
   out.attemptsBeforeNext = Math.max(1, Math.round(Number(out.attemptsBeforeNext)) || DEFAULT_SETTINGS.attemptsBeforeNext);
   out.speechRate = Number(out.speechRate) || DEFAULT_SETTINGS.speechRate;
@@ -177,35 +185,30 @@ function normSettings(s) {
 async function reloadData() {
   const [s, cw, st, rc] = await timed(Promise.all([getSettings(), listCustomWords(), getAllStats(), getKV('rewardCount', 0)]), 5000);
   settings = normSettings(s);
-  customWords = Array.isArray(cw) ? cw : [];
+  customWords = (Array.isArray(cw) ? cw : []).filter((w) => w && w.id && w.text).map(placeCustom);
   stats = st || {};
   rewardCount = Math.max(0, Number(rc) || 0);
+  migrateSettings(s);
 }
 
-const allWords = () => [...BASE_WORDS, ...customWords].filter((w) => w && w.id && w.text);
+// הגדרות ישנות (level 1..5, בלי station): התחנה מחושבת בזיכרון מיד, ונשמרת פעם אחת —
+// רק אחרי סנכרון ראשון. שמירה לפני שהמכשיר משך מהענן הייתה נחשבת "שינוי מקומי" ודורסת
+// בענן תחנה שמכשיר אחר כבר התקדם אליה
+function migrateSettings(stored) {
+  if (migrationSaved || !lastSyncSeen || !needsMigration(stored)) return;
+  migrationSaved = true;
+  const next = withStation(stored);
+  saveSettings({ ...stored, station: next.station, level: next.level })
+    .catch((e) => { migrationSaved = false; console.warn('migrate settings', e); });
+}
+
+const allWords = () => [...BASE_WORDS, ...customWords];
+const currentStation = () => settings.station;
 
 // ---------- תור המילים ----------
 function nextWord() {
-  const L = settings.level;
   const all = allWords();
-  let pool = all.filter((w) => levelOf(w) <= L);
-  if (!pool.length) pool = all.length ? all : BASE_WORDS;
-  const st = (w) => stats[w.id] || {};
-
-  // 1) מילים של השלב הנוכחי שעוד לא נקראו נכון  2) מילים שדילגו עליהן  3) השאר — הכי פחות נראו
-  const fresh = pool.filter((w) => levelOf(w) === L && !st(w).correct);
-  const skipped = pool.filter((w) => !fresh.includes(w) && st(w).lastOutcome === 'skipped');
-  const rest = pool.filter((w) => !fresh.includes(w) && !skipped.includes(w));
-  const leastSeen = (list) => shuffle(list).sort((a, b) => (st(a).seen || 0) - (st(b).seen || 0)).slice(0, 3);
-
-  for (const [bucket, narrow] of [[fresh, (x) => x], [skipped, (x) => x], [rest, leastSeen]]) {
-    const options = bucket.filter((w) => !recent.includes(w.id));
-    if (options.length) return pickOne(narrow(options));
-  }
-  // מאגר קטן מאוד: רק לא אותה מילה פעמיים ברצף
-  const last = recent[recent.length - 1];
-  const options = pool.filter((w) => w.id !== last);
-  return pickOne(options.length ? options : pool);
+  return pickNext({ words: all.length ? all : BASE_WORDS, stats, station: currentStation(), recent, turn: ++turn });
 }
 
 // ---------- תצוגה ----------
@@ -231,6 +234,19 @@ function setMic(mode) { // locked | ready | listening
     void el.mic.offsetWidth; // מתחילים את הטבעת מלאה
     el.mic.classList.add('is-counting');
   }
+}
+
+// ההשמעה נפתחת רק אחרי ניסיון קריאה אחד (או כשהמילה הסתיימה)
+function setHear(locked) {
+  el.hear.classList.toggle('is-locked', locked);
+  el.hear.setAttribute('aria-disabled', String(locked));
+}
+function nudgeHear() {
+  softBoop();
+  el.hear.classList.remove('is-nudge');
+  void el.hear.offsetWidth;
+  el.hear.classList.add('is-nudge');
+  say('קודם תנסה לקרוא', settings.speechRate);
 }
 
 let nudgeTimer = null;
@@ -266,26 +282,44 @@ function renderStars(popNew = false) {
   el.stars.setAttribute('aria-label', `${filled} מתוך ${n} עד הציור`);
 }
 
+// "שָׁלָב 2 · אִ" ונקודה לכל תחנה של השלב: מלאה = עברנו, טבעת = התחנה הנוכחית
 function renderLevel() {
-  const L = LEVELS.find((l) => l.id === settings.level) || LEVELS[0];
-  const num = document.createElement('span');
-  num.className = 'lv-num';
-  num.textContent = `${STR.level} ${L.id}`;
-  const name = document.createElement('span');
-  name.className = 'lv-name';
-  name.textContent = L.name;
-  el.levelChip.replaceChildren(num, name);
+  const cur = currentStation();
+  const L = levelInfo(stageOfStation(cur));
+  const span = (cls, text = '') => {
+    const x = document.createElement('span');
+    x.className = cls;
+    x.textContent = text;
+    return x;
+  };
+  const kids = [span('lv-num', `${STR.level} ${L.id}`), span('lv-sound', L.sound)];
+  const list = L.stations || [];
+  if (list.length > 1) {
+    const dots = span('lv-dots');
+    dots.setAttribute('aria-hidden', 'true');
+    for (const i of list) dots.append(span(`lv-dot${i < cur ? ' is-done' : i === cur ? ' is-current' : ''}`));
+    kids.push(dots);
+  }
+  el.levelChip.replaceChildren(...kids);
+  const n = stationInfo(cur).n;
+  el.levelChip.setAttribute('role', 'img');
+  el.levelChip.setAttribute('aria-label', list.length > 1 ? `שלב ${L.id}, תחנה ${n} מתוך ${list.length}` : `שלב ${L.id}`);
 }
 
 let bannerTimer;
-function showBanner() {
-  const L = LEVELS.find((l) => l.id === settings.level) || LEVELS[0];
+// kind: 'stage' — שלב חדש (עם שם השלב) | 'station' — תחנה חדשה באותו שלב
+function showBanner(kind) {
+  const L = levelInfo(stageOfStation(currentStation()));
   const title = document.createElement('span');
-  title.textContent = STR.levelUp;
-  const name = document.createElement('span');
-  name.className = 'bn-name';
-  name.textContent = L.name;
-  el.banner.replaceChildren(title, name);
+  title.textContent = kind === 'stage' ? STR.levelUp : STR.newStation;
+  const kids = [title];
+  if (kind === 'stage') {
+    const name = document.createElement('span');
+    name.className = 'bn-name';
+    name.textContent = L.name;
+    kids.push(name);
+  }
+  el.banner.replaceChildren(...kids);
   el.banner.hidden = false;
   clearTimeout(bannerTimer);
   bannerTimer = setTimeout(() => { el.banner.hidden = true; }, 2500);
@@ -322,7 +356,7 @@ function renderStatus() {
 function updateDebug() {
   if (!DEBUG) return;
   el.debugState.textContent =
-    `${word?.id ?? '—'} · ${state} · ניסיונות ${attempts} · פרס ${rewardCount}/${settings.wordsPerReward} · שלב ${settings.level}`;
+    `${word?.id ?? '—'} · ${state} · ניסיונות ${attempts} · פרס ${rewardCount}/${settings.wordsPerReward} · שלב ${settings.level} · תחנה ${settings.station}`;
 }
 
 // ---------- לולאת מילה ----------
@@ -373,6 +407,8 @@ async function loadWord() {
   attempts = 0;
   silences = 0;
   heardBeforeRead = false;
+  tries = 0;
+  setHear(true);
   transcripts = [];
   clearTimeout(messyTimer);
   setState('loading');
@@ -380,10 +416,11 @@ async function loadWord() {
   renderStars();
   renderLevel();
   if (bannerPending) {
-    bannerPending = false;
-    showBanner();
+    const kind = bannerPending;
+    bannerPending = null;
+    showBanner(kind);
     chime();
-    say(STR.levelUp, settings.speechRate);
+    say(kind === 'stage' ? STR.levelUp : SAY_NEW_STATION, settings.speechRate);
   }
   el.pic.hidden = true;
   el.manual.hidden = true;
@@ -435,17 +472,50 @@ function startListening() {
     stopListening();
     handleHeard({ error: 'no-speech' });
   }, LISTEN_MS + 7000);
-  listen({ maxMs: LISTEN_MS, onSpeech: () => { if (my === listenSeq) el.vu.classList.add('is-hearing'); } }).then((res) => {
+  const w = word;
+  const analyze = settings.analyzeLeft > 0 && canRecord && isReady();
+  const listening = listen({ maxMs: LISTEN_MS, onSpeech: () => { if (my === listenSeq) el.vu.classList.add('is-hearing'); } });
+  // קודם הזיהוי (העיקר), ואז ההקלטה. אם באייפד השניים מפריעים זה לזה — נראה את זה ב-diag
+  const recording = analyze ? new Promise((r) => setTimeout(r, 150)).then(() => startRecording()) : null;
+  listening.then((res) => {
     clearTimeout(guard);
+    if (recording) finishAnalysis(recording, res, w, my === listenSeq);
     if (my !== listenSeq) return;
     handleHeard(res || { error: 'no-speech' });
   });
+}
+
+// שומר את הניסיון (שמע + מה הזיהוי החזיר + ציר זמן) לניתוח, וסופר לאחור את analyzeLeft
+async function finishAnalysis(recording, res, w, current) {
+  try {
+    const started = await recording;
+    const rec = started && !started.error ? await stopRecording() : started;
+    if (!current || !w) return; // בוטל (למשל לחצו השמע באמצע) — לא שומרים
+    res = res || { error: 'no-speech' };
+    const alts = res.alternatives || [];
+    const result = alts.length ? (matches(w.text, alts, settings.leniency) ? 'match' : 'nomatch')
+      : res.error === 'no-speech' ? 'no-speech' : `error:${res.error || 'unknown'}`;
+    const ok = await uploadAttempt({
+      wordId: w.id, target: w.text, result, alternatives: alts,
+      diag: { ...(res.diag || {}), leniency: settings.leniency, order: 'sr-then-rec' }, rec,
+    });
+    if (!ok) return;
+    let base = settings;
+    try { base = normSettings(await timed(getSettings())); } catch {}
+    const left = Math.max(0, (base.analyzeLeft ?? 0) - 1);
+    settings = { ...settings, analyzeLeft: left };
+    await timed(saveSettings({ ...base, analyzeLeft: left }));
+  } catch (e) {
+    console.warn('analysis', e);
+  }
 }
 
 // תוצאה מהזיהוי (או מפאנל הבדיקות)
 function handleHeard(res) {
   if (state !== 'listening' && state !== 'read') return;
   setState('read');
+  tries++;
+  setHear(false);
   if (res.alternatives?.length) {
     silences = 0;
     transcripts.push(res.alternatives[0]);
@@ -496,17 +566,7 @@ async function success() {
   rewardCount++;
   try { await timed(setKV('rewardCount', rewardCount)); } catch (e) { console.warn('rewardCount', e); }
 
-  // עלייה בשלב: כל מילות השלב נקראו נכון לפחות פעם אחת
-  const L = settings.level;
-  const levelWords = allWords().filter((x) => levelOf(x) === L);
-  if (L < LEVELS.length && levelWords.length && levelWords.every((x) => stats[x.id]?.correct > 0)) {
-    // על בסיס ההגדרות העדכניות במכשיר: הסנכרון אולי הביא בינתיים שינוי מהטלפון, ושמירה של העותק שבזיכרון הייתה דורסת אותו
-    let base = settings;
-    try { base = normSettings(await timed(getSettings())); } catch (e) { console.warn('getSettings', e); }
-    settings = { ...base, level: L + 1 };
-    bannerPending = true;
-    try { await timed(saveSettings(settings)); } catch (e) { console.warn('saveSettings', e); }
-  }
+  await maybeAdvance();
 
   if (my !== loadSeq) return;
   renderStars(true);
@@ -514,6 +574,21 @@ async function success() {
   setNext('on', due);
   if (due) setTimeout(() => { if (my === loadSeq && state === 'done') coach(STR.reward, 'go'); }, 1800);
   updateDebug();
+}
+
+// מעבר תחנה אחרי כל מילה שנרשמה: 80% ממילות התחנה הנוכחית (מהרשימה ושל ההורה) נקראו נכון
+// לפחות פעם אחת, ולא בתחנה האחרונה. הבאנר מוצג עם המילה הבאה
+async function maybeAdvance() {
+  const cur = currentStation();
+  const next = nextStation(allWords(), stats, cur);
+  if (!next) return;
+  // על בסיס ההגדרות העדכניות במכשיר: הסנכרון אולי הביא בינתיים שינוי מהטלפון, ושמירה של העותק שבזיכרון הייתה דורסת אותו
+  let base = settings;
+  try { base = normSettings(await timed(getSettings())); } catch (e) { console.warn('getSettings', e); }
+  if (base.station !== cur) { settings = base; return; } // ההורה בחר בינתיים תחנה אחרת (ממכשיר אחר)
+  settings = { ...base, station: next, level: stageOfStation(next) };
+  bannerPending = stageOfStation(next) !== stageOfStation(cur) ? 'stage' : 'station';
+  try { await timed(saveSettings(settings)); } catch (e) { console.warn('saveSettings', e); }
 }
 
 async function giveUp() {
@@ -530,6 +605,7 @@ async function giveUp() {
     await timed(recordWord({ wordId: w.id, outcome: 'skipped', attempts, transcripts: [...transcripts] }));
     stats = await timed(getAllStats());
   } catch (e) { console.warn('recordWord', e); }
+  await maybeAdvance(); // דילוג לא מוסיף מילה שנקראה, אבל הסנכרון אולי הביא בינתיים קריאות ממכשיר אחר
   if (my !== loadSeq) return;
   setNext('on', rewardCount >= settings.wordsPerReward);
   updateDebug();
@@ -661,7 +737,7 @@ async function closeParentArea() {
   parentOpen = false;
   try { await reloadData(); } catch (e) { console.warn('reloadData', e); }
   dataDirty = false;
-  bannerPending = false;
+  bannerPending = null;
   renderStart();
   if (needLogin) { showLogin(); return; }
   show(returnTo);
@@ -1035,6 +1111,7 @@ el.confirmNo.addEventListener('click', () => closeConfirm(false));
 
 el.hear.addEventListener('click', () => {
   if (!word) return;
+  if (el.hear.classList.contains('is-locked')) return nudgeHear();
   let delay = 0;
   if (state === 'listening') { // לא להקשיב להקראה עצמה
     listenSeq++;

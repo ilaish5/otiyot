@@ -1,0 +1,9811 @@
+[
+ {
+  "id": "af",
+  "text": "אַף",
+  "plain": "אף",
+  "pic": "👃",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yad",
+  "text": "יָד",
+  "plain": "יד",
+  "pic": "✋",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ma",
+  "text": "מָה",
+  "plain": "מה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "saba",
+  "text": "סַבָּא",
+  "plain": "סבא",
+  "pic": "👴",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "emoji kept from js/words.js (old man)"
+ },
+ {
+  "id": "banana",
+  "text": "בָּנָנָה",
+  "plain": "בננה",
+  "pic": "🍌",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 3,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "cham",
+  "text": "חַם",
+  "plain": "חם",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "naal",
+  "text": "נַעַל",
+  "plain": "נעל",
+  "pic": "👟",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 2,
+  "letters": 3,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "achat",
+  "text": "אַחַת",
+  "plain": "אחת",
+  "pic": "1️⃣",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 2,
+  "letters": 3,
+  "category": "numbers",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form (what children count with)"
+ },
+ {
+  "id": "katan",
+  "text": "קָטָן",
+  "plain": "קטן",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "achal",
+  "text": "אָכַל",
+  "plain": "אכל",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gan",
+  "text": "גַּן",
+  "plain": "גן",
+  "pic": "🛝",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "places",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "para",
+  "text": "פָּרָה",
+  "plain": "פרה",
+  "pic": "🐄",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "halav",
+  "text": "חָלָב",
+  "plain": "חלב",
+  "pic": "🥛",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "primer-kp",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kar",
+  "text": "קַר",
+  "plain": "קר",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "pach",
+  "text": "פַּח",
+  "plain": "פח",
+  "pic": "🗑️",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "patach",
+  "text": "פָּתַח",
+  "plain": "פתח",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "halach",
+  "text": "הָלַךְ",
+  "plain": "הלך",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "lavan",
+  "text": "לָבָן",
+  "plain": "לבן",
+  "pic": "⚪",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "colors",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shata",
+  "text": "שָׁתָה",
+  "plain": "שתה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yam",
+  "text": "יָם",
+  "plain": "ים",
+  "pic": "🌊",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "marak",
+  "text": "מָרָק",
+  "plain": "מרק",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "dag",
+  "text": "דָּג",
+  "plain": "דג",
+  "pic": "🐟",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yashav",
+  "text": "יָשַׁב",
+  "plain": "ישב",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sham",
+  "text": "שָׁם",
+  "plain": "שם",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "there; the homograph שֵׁם (name) was left out"
+ },
+ {
+  "id": "tzav",
+  "text": "צָב",
+  "plain": "צב",
+  "pic": "🐢",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "matana",
+  "text": "מַתָּנָה",
+  "plain": "מתנה",
+  "pic": "🎁",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 3,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nafal",
+  "text": "נָפַל",
+  "plain": "נפל",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "aba",
+  "text": "אַבָּא",
+  "plain": "אבא",
+  "pic": "👨",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "emoji kept from js/words.js (man)"
+ },
+ {
+  "id": "tzalachat",
+  "text": "צַלַּחַת",
+  "plain": "צלחת",
+  "pic": "🍽️",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 3,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nahash",
+  "text": "נָחָשׁ",
+  "plain": "נחש",
+  "pic": "🐍",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shafan",
+  "text": "שָׁפָן",
+  "plain": "שפן",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chadash",
+  "text": "חָדָשׁ",
+  "plain": "חדש",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "agas",
+  "text": "אַגָּס",
+  "plain": "אגס",
+  "pic": "🍐",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kafatz",
+  "text": "קָפַץ",
+  "plain": "קפץ",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sagar",
+  "text": "סָגַר",
+  "plain": "סגר",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sapa",
+  "text": "סַפָּה",
+  "plain": "ספה",
+  "pic": "🛋️",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "lama",
+  "text": "לָמָּה",
+  "plain": "למה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ba",
+  "text": "בָּא",
+  "plain": "בא",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "verbs",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shana",
+  "text": "שָׁנָה",
+  "plain": "שנה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "time",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "bacha",
+  "text": "בָּכָה",
+  "plain": "בכה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "zarak",
+  "text": "זָרַק",
+  "plain": "זרק",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kaf",
+  "text": "כַּף",
+  "plain": "כף",
+  "pic": "🥄",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "raa",
+  "text": "רָאָה",
+  "plain": "ראה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "bat",
+  "text": "בַּת",
+  "plain": "בת",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anan",
+  "text": "עָנָן",
+  "plain": "ענן",
+  "pic": "☁️",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "bana",
+  "text": "בָּנָה",
+  "plain": "בנה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shaa",
+  "text": "שָׁעָה",
+  "plain": "שעה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "time",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ahav",
+  "text": "אָהַב",
+  "plain": "אהב",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chazak",
+  "text": "חָזָק",
+  "plain": "חזק",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chag",
+  "text": "חַג",
+  "plain": "חג",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "time",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gav",
+  "text": "גַּב",
+  "plain": "גב",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "body",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chaya",
+  "text": "חַיָּה",
+  "plain": "חיה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "zakan",
+  "text": "זָקָן",
+  "plain": "זקן",
+  "pic": "🧔",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "beard; the homograph זָקֵן (old man) was left out"
+ },
+ {
+  "id": "shabat",
+  "text": "שַׁבָּת",
+  "plain": "שבת",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "time",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "zahav",
+  "text": "זָהָב",
+  "plain": "זהב",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kara",
+  "text": "קָרָא",
+  "plain": "קרא",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ratz",
+  "text": "רָץ",
+  "plain": "רץ",
+  "pic": "🏃",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "verbs",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ach",
+  "text": "אָח",
+  "plain": "אח",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shama",
+  "text": "שָׁמַע",
+  "plain": "שמע",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tabaat",
+  "text": "טַבַּעַת",
+  "plain": "טבעת",
+  "pic": "💍",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 3,
+  "letters": 4,
+  "category": "clothes",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shar",
+  "text": "שָׁר",
+  "plain": "שר",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "verbs",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tas",
+  "text": "טָס",
+  "plain": "טס",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "verbs",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "magaf",
+  "text": "מַגָּף",
+  "plain": "מגף",
+  "pic": "🥾",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "rakad",
+  "text": "רָקַד",
+  "plain": "רקד",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 2,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chava",
+  "text": "חַוָּה",
+  "plain": "חוה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "places",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "barak",
+  "text": "בָּרָק",
+  "plain": "ברק",
+  "pic": "⚡",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "af_verb",
+  "text": "עָף",
+  "plain": "עף",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "verbs",
+  "sources": [
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tayas",
+  "text": "טַיָּס",
+  "plain": "טיס",
+  "pic": "🧑‍✈️",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "salat",
+  "text": "סָלָט",
+  "plain": "סלט",
+  "pic": "🥗",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nahar",
+  "text": "נָהָר",
+  "plain": "נהר",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kam",
+  "text": "קָם",
+  "plain": "קם",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "verbs",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "daf",
+  "text": "דַּף",
+  "plain": "דף",
+  "pic": "📄",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "toys",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "dayag",
+  "text": "דַּיָּג",
+  "plain": "דיג",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yaar",
+  "text": "יַעַר",
+  "plain": "יער",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzayar",
+  "text": "צַיָּר",
+  "plain": "ציר",
+  "pic": "🧑‍🎨",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "batzal",
+  "text": "בָּצָל",
+  "plain": "בצל",
+  "pic": "🧅",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tabach",
+  "text": "טַבָּח",
+  "plain": "טבח",
+  "pic": "🧑‍🍳",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gag",
+  "text": "גַּג",
+  "plain": "גג",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "panas",
+  "text": "פָּנָס",
+  "plain": "פנס",
+  "pic": "🔦",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "check",
+  "note": "Nakdan: פָּנָס, Wiktionary: פַּנָּס (dagesh in nun). Same level either way"
+ },
+ {
+  "id": "zamar",
+  "text": "זַמָּר",
+  "plain": "זמר",
+  "pic": "🧑‍🎤",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "zanav",
+  "text": "זָנָב",
+  "plain": "זנב",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "machak",
+  "text": "מַחַק",
+  "plain": "מחק",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chala",
+  "text": "חַלָּה",
+  "plain": "חלה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzavar",
+  "text": "צַוָּאר",
+  "plain": "צואר",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 4,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gamad",
+  "text": "גַּמָּד",
+  "plain": "גמד",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzachak",
+  "text": "צָחַק",
+  "plain": "צחק",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anaf",
+  "text": "עָנָף",
+  "plain": "ענף",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "zahal",
+  "text": "זַחַל",
+  "plain": "זחל",
+  "pic": "🐛",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gamal",
+  "text": "גָּמָל",
+  "plain": "גמל",
+  "pic": "🐫",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "primer-kp",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "katav",
+  "text": "כָּתַב",
+  "plain": "כתב",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kad",
+  "text": "כַּד",
+  "plain": "כד",
+  "pic": "🏺",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "home",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nachal",
+  "text": "נַחַל",
+  "plain": "נחל",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ananas",
+  "text": "אָנָנָס",
+  "plain": "אננס",
+  "pic": "🍍",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 3,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "primer-kp",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chasa",
+  "text": "חַסָּה",
+  "plain": "חסה",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "machar",
+  "text": "מָחָר",
+  "plain": "מחר",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "time",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ganan",
+  "text": "גַּנָּן",
+  "plain": "גנן",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sal",
+  "text": "סַל",
+  "plain": "סל",
+  "pic": "🧺",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "hagav",
+  "text": "חָגָב",
+  "plain": "חגב",
+  "pic": "",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kabai",
+  "text": "כַּבַּאי",
+  "plain": "כבאי",
+  "pic": "🧑‍🚒",
+  "level": 1,
+  "stage": 1,
+  "station": 3,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "har",
+  "text": "הַר",
+  "plain": "הר",
+  "pic": "⛰️",
+  "level": 1,
+  "stage": 1,
+  "station": 1,
+  "syllables": 1,
+  "letters": 2,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mayim",
+  "text": "מַיִם",
+  "plain": "מים",
+  "pic": "💧",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "bayit",
+  "text": "בַּיִת",
+  "plain": "בית",
+  "pic": "🏠",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ayin",
+  "text": "עַיִן",
+  "plain": "עין",
+  "pic": "👁️",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "pil",
+  "text": "פִּיל",
+  "plain": "פיל",
+  "pic": "🐘",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yadayim",
+  "text": "יָדַיִם",
+  "plain": "ידים",
+  "pic": "🙌",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 3,
+  "letters": 4,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shinayim",
+  "text": "שִׁנַּיִם",
+  "plain": "שנים",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 3,
+  "letters": 4,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tik",
+  "text": "תִּיק",
+  "plain": "תיק",
+  "pic": "🎒",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 3,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mita",
+  "text": "מִטָּה",
+  "plain": "מטה",
+  "pic": "🛏️",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "taim",
+  "text": "טָעִים",
+  "plain": "טעים",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mitz",
+  "text": "מִיץ",
+  "plain": "מיץ",
+  "pic": "🧃",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kapit",
+  "text": "כַּפִּית",
+  "plain": "כפית",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "pitza",
+  "text": "פִּיצָה",
+  "plain": "פיצה",
+  "pic": "🍕",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "masait",
+  "text": "מַשָּׂאִית",
+  "plain": "משאית",
+  "pic": "🚚",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 3,
+  "letters": 5,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ish",
+  "text": "אִישׁ",
+  "plain": "איש",
+  "pic": "👨",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tiras",
+  "text": "תִּירָס",
+  "plain": "תירס",
+  "pic": "🌽",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ima",
+  "text": "אִמָּא",
+  "plain": "אמא",
+  "pic": "👩",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "emoji kept from js/words.js (woman)"
+ },
+ {
+  "id": "shamayim",
+  "text": "שָׁמַיִם",
+  "plain": "שמים",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 3,
+  "letters": 4,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sakin",
+  "text": "סַכִּין",
+  "plain": "סכין",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "kitchen knife; no picture on purpose"
+ },
+ {
+  "id": "gina",
+  "text": "גִּנָּה",
+  "plain": "גנה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "places",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "i",
+  "text": "אִי",
+  "plain": "אי",
+  "pic": "🏝️",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 2,
+  "category": "places",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "karit",
+  "text": "כָּרִית",
+  "plain": "כרית",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "higia",
+  "text": "הִגִּיעַ",
+  "plain": "הגיע",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 3,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "isha",
+  "text": "אִשָּׁה",
+  "plain": "אשה",
+  "pic": "👩",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "naki",
+  "text": "נָקִי",
+  "plain": "נקי",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "panim",
+  "text": "פָּנִים",
+  "plain": "פנים",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "pita",
+  "text": "פִּתָּה",
+  "plain": "פתה",
+  "pic": "🫓",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "karich",
+  "text": "כָּרִיךְ",
+  "plain": "כריך",
+  "pic": "🥪",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mi",
+  "text": "מִי",
+  "plain": "מי",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 2,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "zayit",
+  "text": "זַיִת",
+  "plain": "זית",
+  "pic": "🫒",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "naim",
+  "text": "נָעִים",
+  "plain": "נעים",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mila",
+  "text": "מִלָּה",
+  "plain": "מלה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "other",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mahir",
+  "text": "מָהִיר",
+  "plain": "מהיר",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzair",
+  "text": "צָעִיר",
+  "plain": "צעיר",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nika",
+  "text": "נִקָּה",
+  "plain": "נקה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "saviv",
+  "text": "סָבִיב",
+  "plain": "סביב",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kiba",
+  "text": "כִּבָּה",
+  "plain": "כבה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shir",
+  "text": "שִׁיר",
+  "plain": "שיר",
+  "pic": "🎵",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shatiach",
+  "text": "שָׁטִיחַ",
+  "plain": "שטיח",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 3,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yamin",
+  "text": "יָמִין",
+  "plain": "ימין",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ir",
+  "text": "עִיר",
+  "plain": "עיר",
+  "pic": "🏙️",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 3,
+  "category": "places",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chika",
+  "text": "חִכָּה",
+  "plain": "חכה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "hi",
+  "text": "הִיא",
+  "plain": "היא",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 3,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "function word"
+ },
+ {
+  "id": "bari",
+  "text": "בָּרִיא",
+  "plain": "בריא",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tipa",
+  "text": "טִפָּה",
+  "plain": "טפה",
+  "pic": "💧",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sira",
+  "text": "סִירָה",
+  "plain": "סירה",
+  "pic": "⛵",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kita",
+  "text": "כִּתָּה",
+  "plain": "כתה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "places",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "riba",
+  "text": "רִבָּה",
+  "plain": "רבה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "pina",
+  "text": "פִּנָּה",
+  "plain": "פנה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ris",
+  "text": "רִיס",
+  "plain": "ריס",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 1,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "im",
+  "text": "עִם",
+  "plain": "עם",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 4,
+  "syllables": 1,
+  "letters": 2,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sakit",
+  "text": "שַׂקִּית",
+  "plain": "שקית",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kayitz",
+  "text": "קַיִץ",
+  "plain": "קיץ",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 3,
+  "category": "time",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nasich",
+  "text": "נָסִיךְ",
+  "plain": "נסיך",
+  "pic": "🤴",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "iti",
+  "text": "אִטִּי",
+  "plain": "אטי",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kir",
+  "text": "קִיר",
+  "plain": "קיר",
+  "pic": "🧱",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 1,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "bahir",
+  "text": "בָּהִיר",
+  "plain": "בהיר",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ritza",
+  "text": "רִיצָה",
+  "plain": "ריצה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "charif",
+  "text": "חָרִיף",
+  "plain": "חריף",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tanin",
+  "text": "תַּנִּין",
+  "plain": "תנין",
+  "pic": "🐊",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sinar",
+  "text": "סִינָר",
+  "plain": "סינר",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kis",
+  "text": "כִּיס",
+  "plain": "כיס",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 1,
+  "letters": 3,
+  "category": "clothes",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "aviv",
+  "text": "אָבִיב",
+  "plain": "אביב",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "time",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sir",
+  "text": "סִיר",
+  "plain": "סיר",
+  "pic": "🍲",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 1,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gitara",
+  "text": "גִּיטָרָה",
+  "plain": "גיטרה",
+  "pic": "🎸",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 3,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tira",
+  "text": "טִירָה",
+  "plain": "טירה",
+  "pic": "🏰",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "places",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzamid",
+  "text": "צָמִיד",
+  "plain": "צמיד",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "clothes",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sika",
+  "text": "סִכָּה",
+  "plain": "סכה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 3,
+  "category": "clothes",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "piya",
+  "text": "פִּיָּה",
+  "plain": "פיה",
+  "pic": "🧚",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chida",
+  "text": "חִידָה",
+  "plain": "חידה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "siach",
+  "text": "שִׂיחַ",
+  "plain": "שיח",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "patish",
+  "text": "פַּטִּישׁ",
+  "plain": "פטיש",
+  "pic": "🔨",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kipa",
+  "text": "כִּפָּה",
+  "plain": "כפה",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 2,
+  "letters": 3,
+  "category": "clothes",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chalil",
+  "text": "חָלִיל",
+  "plain": "חליל",
+  "pic": "🪈",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mapit",
+  "text": "מַפִּית",
+  "plain": "מפית",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kabait",
+  "text": "כַּבָּאִית",
+  "plain": "כבאית",
+  "pic": "🚒",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 3,
+  "letters": 5,
+  "category": "vehicles",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chatzil",
+  "text": "חָצִיל",
+  "plain": "חציל",
+  "pic": "🍆",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzaif",
+  "text": "צָעִיף",
+  "plain": "צעיף",
+  "pic": "🧣",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gir",
+  "text": "גִּיר",
+  "plain": "גיר",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 5,
+  "syllables": 1,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kashit",
+  "text": "קַשִּׁית",
+  "plain": "קשית",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kalanit",
+  "text": "כַּלָּנִית",
+  "plain": "כלנית",
+  "pic": "",
+  "level": 2,
+  "stage": 2,
+  "station": 6,
+  "syllables": 3,
+  "letters": 5,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "lo",
+  "text": "לֹא",
+  "plain": "לא",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 2,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "toda",
+  "text": "תּוֹדָה",
+  "plain": "תודה",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "od",
+  "text": "עוֹד",
+  "plain": "עוד",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kadur",
+  "text": "כַּדּוּר",
+  "plain": "כדור",
+  "pic": "⚽",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shalom",
+  "text": "שָׁלוֹם",
+  "plain": "שלום",
+  "pic": "👋",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "or",
+  "text": "אוֹר",
+  "plain": "אור",
+  "pic": "💡",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "rosh",
+  "text": "רֹאשׁ",
+  "plain": "ראש",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "oto",
+  "text": "אוֹטוֹ",
+  "plain": "אוטו",
+  "pic": "🚗",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "colloquial but standard word for car (the Hebrew CDI lists אוטו/ מכונית)"
+ },
+ {
+  "id": "uga",
+  "text": "עוּגָה",
+  "plain": "עוגה",
+  "pic": "🍰",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gadol",
+  "text": "גָּדוֹל",
+  "plain": "גדול",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "buba",
+  "text": "בֻּבָּה",
+  "plain": "בבה",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sipur",
+  "text": "סִפּוּר",
+  "plain": "ספור",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chatul",
+  "text": "חָתוּל",
+  "plain": "חתול",
+  "pic": "🐈",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sus",
+  "text": "סוּס",
+  "plain": "סוס",
+  "pic": "🐴",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 1,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzipor",
+  "text": "צִפּוֹר",
+  "plain": "צפור",
+  "pic": "🐦",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tinok",
+  "text": "תִּינוֹק",
+  "plain": "תינוק",
+  "pic": "👶",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 5,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kos",
+  "text": "כּוֹס",
+  "plain": "כוס",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "matos",
+  "text": "מָטוֹס",
+  "plain": "מטוס",
+  "pic": "✈️",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tov",
+  "text": "טוֹב",
+  "plain": "טוב",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "dov",
+  "text": "דּוֹב",
+  "plain": "דוב",
+  "pic": "🐻",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ugiya",
+  "text": "עוּגִיָּה",
+  "plain": "עוגיה",
+  "pic": "🍪",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 3,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "balon",
+  "text": "בָּלוֹן",
+  "plain": "בלון",
+  "pic": "🎈",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kova",
+  "text": "כּוֹבַע",
+  "plain": "כובע",
+  "pic": "🧢",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "dubi",
+  "text": "דֻּבִּי",
+  "plain": "דבי",
+  "pic": "🧸",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kof",
+  "text": "קוֹף",
+  "plain": "קוף",
+  "pic": "🐒",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tapuah",
+  "text": "תַּפּוּחַ",
+  "plain": "תפוח",
+  "pic": "🍎",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 3,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shokolad",
+  "text": "שׁוֹקוֹלָד",
+  "plain": "שוקולד",
+  "pic": "🍫",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 3,
+  "letters": 6,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "otobus",
+  "text": "אוֹטוֹבּוּס",
+  "plain": "אוטובוס",
+  "pic": "🚌",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 3,
+  "letters": 7,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tut",
+  "text": "תּוּת",
+  "plain": "תות",
+  "pic": "🍓",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 1,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shaon",
+  "text": "שָׁעוֹן",
+  "plain": "שעון",
+  "pic": "⏰",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ruach",
+  "text": "רוּחַ",
+  "plain": "רוח",
+  "pic": "💨",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kum",
+  "text": "קוּם",
+  "plain": "קום",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 1,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chalon",
+  "text": "חַלּוֹן",
+  "plain": "חלון",
+  "pic": "🪟",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sabon",
+  "text": "סַבּוֹן",
+  "plain": "סבון",
+  "pic": "🧼",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "of",
+  "text": "עוֹף",
+  "plain": "עוף",
+  "pic": "🍗",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "hakol",
+  "text": "הַכֹּל",
+  "plain": "הכל",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 3,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "bo",
+  "text": "בּוֹא",
+  "plain": "בוא",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shum",
+  "text": "שׁוּם",
+  "plain": "שום",
+  "pic": "🧄",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 1,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yom",
+  "text": "יוֹם",
+  "plain": "יום",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "time",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chof",
+  "text": "חוֹף",
+  "plain": "חוף",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "places",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kochav",
+  "text": "כּוֹכָב",
+  "plain": "כוכב",
+  "pic": "⭐",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tapuz",
+  "text": "תַּפּוּז",
+  "plain": "תפוז",
+  "pic": "🍊",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "rutz",
+  "text": "רוּץ",
+  "plain": "רוץ",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 1,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "hol",
+  "text": "חוֹל",
+  "plain": "חול",
+  "pic": "🏖️",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chashuch",
+  "text": "חָשׁוּךְ",
+  "plain": "חשוך",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "lashon",
+  "text": "לָשׁוֹן",
+  "plain": "לשון",
+  "pic": "👅",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "aron",
+  "text": "אָרוֹן",
+  "plain": "ארון",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chamud",
+  "text": "חָמוּד",
+  "plain": "חמוד",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tuki",
+  "text": "תֻּכִּי",
+  "plain": "תכי",
+  "pic": "🦜",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kubiya",
+  "text": "קֻבִּיָּה",
+  "plain": "קביה",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 3,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shalosh",
+  "text": "שָׁלוֹשׁ",
+  "plain": "שלוש",
+  "pic": "3️⃣",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "numbers",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form"
+ },
+ {
+  "id": "ratov",
+  "text": "רָטוֹב",
+  "plain": "רטוב",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "karov",
+  "text": "קָרוֹב",
+  "plain": "קרוב",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gavoha",
+  "text": "גָּבוֹהַּ",
+  "plain": "גבוה",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 3,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shavur",
+  "text": "שָׁבוּר",
+  "plain": "שבור",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chipushit",
+  "text": "חִפּוּשִׁית",
+  "plain": "חפושית",
+  "pic": "🪲",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 3,
+  "letters": 6,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shavua",
+  "text": "שָׁבוּעַ",
+  "plain": "שבוע",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 3,
+  "letters": 4,
+  "category": "time",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tush",
+  "text": "טוּשׁ",
+  "plain": "טוש",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 1,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kol",
+  "text": "קוֹל",
+  "plain": "קול",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "other",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shachor",
+  "text": "שָׁחוֹר",
+  "plain": "שחור",
+  "pic": "⚫",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 2,
+  "letters": 4,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tanur",
+  "text": "תַּנּוּר",
+  "plain": "תנור",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "dod",
+  "text": "דּוֹד",
+  "plain": "דוד",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "adom",
+  "text": "אָדוֹם",
+  "plain": "אדום",
+  "pic": "🔴",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "hu",
+  "text": "הוּא",
+  "plain": "הוא",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 1,
+  "letters": 3,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "function word"
+ },
+ {
+  "id": "buot",
+  "text": "בּוּעוֹת",
+  "plain": "בועות",
+  "pic": "🫧",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nura",
+  "text": "נוּרָה",
+  "plain": "נורה",
+  "pic": "💡",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "doda",
+  "text": "דּוֹדָה",
+  "plain": "דודה",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chum",
+  "text": "חוּם",
+  "plain": "חום",
+  "pic": "🟤",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 1,
+  "letters": 3,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "guf",
+  "text": "גּוּף",
+  "plain": "גוף",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 1,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "atzuv",
+  "text": "עָצוּב",
+  "plain": "עצוב",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kachol",
+  "text": "כָּחוֹל",
+  "plain": "כחול",
+  "pic": "🔵",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "monit",
+  "text": "מוֹנִית",
+  "plain": "מונית",
+  "pic": "🚕",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 5,
+  "category": "vehicles",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yarok",
+  "text": "יָרוֹק",
+  "plain": "ירוק",
+  "pic": "🟢",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "matok",
+  "text": "מָתוֹק",
+  "plain": "מתוק",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzura",
+  "text": "צוּרָה",
+  "plain": "צורה",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sulam",
+  "text": "סֻלָּם",
+  "plain": "סלם",
+  "pic": "🪜",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "achot",
+  "text": "אָחוֹת",
+  "plain": "אחות",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "horim",
+  "text": "הוֹרִים",
+  "plain": "הורים",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 5,
+  "category": "family",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mora",
+  "text": "מוֹרָה",
+  "plain": "מורה",
+  "pic": "🧑‍🏫",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chiyuch",
+  "text": "חִיּוּךְ",
+  "plain": "חיוך",
+  "pic": "😊",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shoko",
+  "text": "שׁוֹקוֹ",
+  "plain": "שוקו",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chibuk",
+  "text": "חִבּוּק",
+  "plain": "חבוק",
+  "pic": "🤗",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "hayom",
+  "text": "הַיּוֹם",
+  "plain": "היום",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "time",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tziyur",
+  "text": "צִיּוּר",
+  "plain": "ציור",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "robot",
+  "text": "רוֹבּוֹט",
+  "plain": "רובוט",
+  "pic": "🤖",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yona",
+  "text": "יוֹנָה",
+  "plain": "יונה",
+  "pic": "🕊️",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "aroch",
+  "text": "אָרוֹךְ",
+  "plain": "ארוך",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzahov",
+  "text": "צָהוֹב",
+  "plain": "צהוב",
+  "pic": "🟡",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tolaat",
+  "text": "תּוֹלַעַת",
+  "plain": "תולעת",
+  "pic": "🪱",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 3,
+  "letters": 5,
+  "category": "animals",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "varod",
+  "text": "וָרוֹד",
+  "plain": "ורוד",
+  "pic": "🩷",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "limon",
+  "text": "לִימוֹן",
+  "plain": "לימון",
+  "pic": "🍋",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sufa",
+  "text": "סוּפָה",
+  "plain": "סופה",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "afor",
+  "text": "אָפוֹר",
+  "plain": "אפור",
+  "pic": "🩶",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "colors",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shual",
+  "text": "שׁוּעָל",
+  "plain": "שועל",
+  "pic": "🦊",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sagol",
+  "text": "סָגוֹל",
+  "plain": "סגול",
+  "pic": "🟣",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "primer-kp",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "garon",
+  "text": "גָּרוֹן",
+  "plain": "גרון",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "body",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "rimon",
+  "text": "רִמּוֹן",
+  "plain": "רמון",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "katom",
+  "text": "כָּתוֹם",
+  "plain": "כתום",
+  "pic": "🟠",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "colors",
+  "sources": [
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chamutz",
+  "text": "חָמוּץ",
+  "plain": "חמוץ",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kokos",
+  "text": "קוֹקוֹס",
+  "plain": "קוקוס",
+  "pic": "🥥",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "igul",
+  "text": "עִגּוּל",
+  "plain": "עגול",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kipod",
+  "text": "קִפּוֹד",
+  "plain": "קפוד",
+  "pic": "🦔",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kinor",
+  "text": "כִּנּוֹר",
+  "plain": "כנור",
+  "pic": "🎻",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chumus",
+  "text": "חוּמוּס",
+  "plain": "חומוס",
+  "pic": "",
+  "level": 3,
+  "stage": 4,
+  "station": 9,
+  "syllables": 2,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "rachok",
+  "text": "רָחוֹק",
+  "plain": "רחוק",
+  "pic": "",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tof",
+  "text": "תּוֹף",
+  "plain": "תוף",
+  "pic": "🥁",
+  "level": 3,
+  "stage": 3,
+  "station": 7,
+  "syllables": 1,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "manof",
+  "text": "מָנוֹף",
+  "plain": "מנוף",
+  "pic": "🏗️",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "iparon",
+  "text": "עִפָּרוֹן",
+  "plain": "עפרון",
+  "pic": "✏️",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 3,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chilazon",
+  "text": "חִלָּזוֹן",
+  "plain": "חלזון",
+  "pic": "🐌",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 3,
+  "letters": 5,
+  "category": "animals",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "masok",
+  "text": "מַסּוֹק",
+  "plain": "מסוק",
+  "pic": "🚁",
+  "level": 3,
+  "stage": 3,
+  "station": 8,
+  "syllables": 2,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ken",
+  "text": "כֵּן",
+  "plain": "כן",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ze",
+  "text": "זֶה",
+  "plain": "זה",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "pe",
+  "text": "פֶּה",
+  "plain": "פה",
+  "pic": "👄",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "rotze",
+  "text": "רוֹצֶה",
+  "plain": "רוצה",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ein",
+  "text": "אֵין",
+  "plain": "אין",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 3,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ochel",
+  "text": "אוֹכֶל",
+  "plain": "אוכל",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "eifo",
+  "text": "אֵיפֹה",
+  "plain": "איפה",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kelev",
+  "text": "כֶּלֶב",
+  "plain": "כלב",
+  "pic": "🐕",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "primer-kp",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "einayim",
+  "text": "עֵינַיִם",
+  "plain": "עינים",
+  "pic": "👀",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 3,
+  "letters": 5,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "echad",
+  "text": "אֶחָד",
+  "plain": "אחד",
+  "pic": "1️⃣",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "numbers",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sefer",
+  "text": "סֵפֶר",
+  "plain": "ספר",
+  "pic": "📖",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "holech",
+  "text": "הוֹלֵךְ",
+  "plain": "הולך",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ten",
+  "text": "תֵּן",
+  "plain": "תן",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "telefon",
+  "text": "טֶלֶפוֹן",
+  "plain": "טלפון",
+  "pic": "☎️",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 3,
+  "letters": 5,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:wiktionary"
+  ],
+  "confidence": "check",
+  "note": "Wiktionary: טֶלֶפוֹן (used here); Nakdan top: טֵלֵפוֹן. Same level either way"
+ },
+ {
+  "id": "yeled",
+  "text": "יֶלֶד",
+  "plain": "ילד",
+  "pic": "🧒",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "regel",
+  "text": "רֶגֶל",
+  "plain": "רגל",
+  "pic": "🦵",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "etz",
+  "text": "עֵץ",
+  "plain": "עץ",
+  "pic": "🌳",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kise",
+  "text": "כִּסֵּא",
+  "plain": "כסא",
+  "pic": "🪑",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yesh",
+  "text": "יֵשׁ",
+  "plain": "יש",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "other",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "delet",
+  "text": "דֶּלֶת",
+  "plain": "דלת",
+  "pic": "🚪",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "beitza",
+  "text": "בֵּיצָה",
+  "plain": "ביצה",
+  "pic": "🥚",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "beten",
+  "text": "בֶּטֶן",
+  "plain": "בטן",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "rakevet",
+  "text": "רַכֶּבֶת",
+  "plain": "רכבת",
+  "pic": "🚂",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 3,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "js/words.js puts it at level 5; by the rule it is level 4 (no shva, 3 syllables)"
+ },
+ {
+  "id": "yashen",
+  "text": "יָשֵׁן",
+  "plain": "ישן",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "present tense / adjective (sleeping); the homograph יָשָׁן (old) was left out"
+ },
+ {
+  "id": "lehem",
+  "text": "לֶחֶם",
+  "plain": "לחם",
+  "pic": "🍞",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shote",
+  "text": "שׁוֹתֶה",
+  "plain": "שותה",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yoshev",
+  "text": "יוֹשֵׁב",
+  "plain": "יושב",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ozen",
+  "text": "אוֹזֶן",
+  "plain": "אוזן",
+  "pic": "👂",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gezer",
+  "text": "גֶּזֶר",
+  "plain": "גזר",
+  "pic": "🥕",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "geshem",
+  "text": "גֶּשֶׁם",
+  "plain": "גשם",
+  "pic": "🌧️",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gerev",
+  "text": "גֶּרֶב",
+  "plain": "גרב",
+  "pic": "🧦",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "perach",
+  "text": "פֶּרַח",
+  "plain": "פרח",
+  "pic": "🌸",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shemesh",
+  "text": "שֶׁמֶשׁ",
+  "plain": "שמש",
+  "pic": "☀️",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "orez",
+  "text": "אוֹרֶז",
+  "plain": "אורז",
+  "pic": "🍚",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "cheder",
+  "text": "חֶדֶר",
+  "plain": "חדר",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shen",
+  "text": "שֵׁן",
+  "plain": "שן",
+  "pic": "🦷",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kafe",
+  "text": "קָפֶה",
+  "plain": "קפה",
+  "pic": "☕",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "boche",
+  "text": "בּוֹכֶה",
+  "plain": "בוכה",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ohev",
+  "text": "אוֹהֵב",
+  "plain": "אוהב",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yafe",
+  "text": "יָפֶה",
+  "plain": "יפה",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sear",
+  "text": "שֵׂעָר",
+  "plain": "שער",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 2,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kofetz",
+  "text": "קוֹפֵץ",
+  "plain": "קופץ",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yareach",
+  "text": "יָרֵחַ",
+  "plain": "ירח",
+  "pic": "🌙",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 3,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chaver",
+  "text": "חָבֵר",
+  "plain": "חבר",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "enav",
+  "text": "עֵנָב",
+  "plain": "ענב",
+  "pic": "🍇",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sichek",
+  "text": "שִׂחֵק",
+  "plain": "שחק",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "boker",
+  "text": "בּוֹקֶר",
+  "plain": "בוקר",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "time",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "lev",
+  "text": "לֵב",
+  "plain": "לב",
+  "pic": "❤️",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "body",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "even",
+  "text": "אֶבֶן",
+  "plain": "אבן",
+  "pic": "🪨",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "te",
+  "text": "תֵּה",
+  "plain": "תה",
+  "pic": "🍵",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "check",
+  "note": "Nakdan: תֵּה, Wiktionary: תֶּה. Same level either way"
+ },
+ {
+  "id": "sameach",
+  "text": "שָׂמֵחַ",
+  "plain": "שמח",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 3,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "erev",
+  "text": "עֶרֶב",
+  "plain": "ערב",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "time",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "rofe",
+  "text": "רוֹפֵא",
+  "plain": "רופא",
+  "pic": "🧑‍⚕️",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "namer",
+  "text": "נָמֵר",
+  "plain": "נמר",
+  "pic": "🐅",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "magevet",
+  "text": "מַגֶּבֶת",
+  "plain": "מגבת",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 3,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chamesh",
+  "text": "חָמֵשׁ",
+  "plain": "חמש",
+  "pic": "5️⃣",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "numbers",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form"
+ },
+ {
+  "id": "tzochek",
+  "text": "צוֹחֵק",
+  "plain": "צוחק",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chole",
+  "text": "חוֹלֶה",
+  "plain": "חולה",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "eser",
+  "text": "עֶשֶׂר",
+  "plain": "עשר",
+  "pic": "🔟",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "numbers",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form"
+ },
+ {
+  "id": "esh",
+  "text": "אֵשׁ",
+  "plain": "אש",
+  "pic": "🔥",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shaket",
+  "text": "שָׁקֵט",
+  "plain": "שקט",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chevel",
+  "text": "חֶבֶל",
+  "plain": "חבל",
+  "pic": "🪢",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "roked",
+  "text": "רוֹקֵד",
+  "plain": "רוקד",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "verbs",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ayef",
+  "text": "עָיֵף",
+  "plain": "עיף",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shesh",
+  "text": "שֵׁשׁ",
+  "plain": "שש",
+  "pic": "6️⃣",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "numbers",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form"
+ },
+ {
+  "id": "pazel",
+  "text": "פָּאזֶל",
+  "plain": "פאזל",
+  "pic": "🧩",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan"
+  ],
+  "confidence": "check",
+  "note": "Wiktionary spells it without alef (פָּזֶל); Nakdan top is פָּאזֶל"
+ },
+ {
+  "id": "super",
+  "text": "סוּפֶּר",
+  "plain": "סופר",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "places",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "leitzan",
+  "text": "לֵיצָן",
+  "plain": "ליצן",
+  "pic": "🤡",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sheva",
+  "text": "שֶׁבַע",
+  "plain": "שבע",
+  "pic": "7️⃣",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "numbers",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form"
+ },
+ {
+  "id": "ale",
+  "text": "עָלֶה",
+  "plain": "עלה",
+  "pic": "🍃",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "melach",
+  "text": "מֶלַח",
+  "plain": "מלח",
+  "pic": "🧂",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kashe",
+  "text": "קָשֶׁה",
+  "plain": "קשה",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kaved",
+  "text": "כָּבֵד",
+  "plain": "כבד",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mea",
+  "text": "מֵאָה",
+  "plain": "מאה",
+  "pic": "💯",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "numbers",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chodesh",
+  "text": "חוֹדֶשׁ",
+  "plain": "חודש",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "time",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "melon",
+  "text": "מֵלוֹן",
+  "plain": "מלון",
+  "pic": "🍈",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "melech",
+  "text": "מֶלֶךְ",
+  "plain": "מלך",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "deshe",
+  "text": "דֶּשֶׁא",
+  "plain": "דשא",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "degel",
+  "text": "דֶּגֶל",
+  "plain": "דגל",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzeva",
+  "text": "צֶבַע",
+  "plain": "צבע",
+  "pic": "🎨",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "toys",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tesha",
+  "text": "תֵּשַׁע",
+  "plain": "תשע",
+  "pic": "9️⃣",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "numbers",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form"
+ },
+ {
+  "id": "efes",
+  "text": "אֶפֶס",
+  "plain": "אפס",
+  "pic": "0️⃣",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "numbers",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kerach",
+  "text": "קֶרַח",
+  "plain": "קרח",
+  "pic": "🧊",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sade",
+  "text": "שָׂדֶה",
+  "plain": "שדה",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "etzem",
+  "text": "עֶצֶם",
+  "plain": "עצם",
+  "pic": "🦴",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sheleg",
+  "text": "שֶׁלֶג",
+  "plain": "שלג",
+  "pic": "❄️",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "katef",
+  "text": "כָּתֵף",
+  "plain": "כתף",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "raev",
+  "text": "רָעֵב",
+  "plain": "רעב",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kan",
+  "text": "קֵן",
+  "plain": "קן",
+  "pic": "🪺",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "nature",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "js/words.js has קַן (level 1); Nakdan and Wiktionary both give קֵן with tsere, so it is level 4 here"
+ },
+ {
+  "id": "beged",
+  "text": "בֶּגֶד",
+  "plain": "בגד",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "clothes",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ner",
+  "text": "נֵר",
+  "plain": "נר",
+  "pic": "🕯️",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "home",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "keshet",
+  "text": "קֶשֶׁת",
+  "plain": "קשת",
+  "pic": "🌈",
+  "level": 4,
+  "stage": 5,
+  "station": 11,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "choref",
+  "text": "חוֹרֶף",
+  "plain": "חורף",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 4,
+  "category": "time",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "male",
+  "text": "מָלֵא",
+  "plain": "מלא",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "vered",
+  "text": "וֶרֶד",
+  "plain": "ורד",
+  "pic": "🌹",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "keter",
+  "text": "כֶּתֶר",
+  "plain": "כתר",
+  "pic": "👑",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 3,
+  "category": "clothes",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "et",
+  "text": "עֵט",
+  "plain": "עט",
+  "pic": "🖊️",
+  "level": 4,
+  "stage": 5,
+  "station": 10,
+  "syllables": 1,
+  "letters": 2,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yavesh",
+  "text": "יָבֵשׁ",
+  "plain": "יבש",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 2,
+  "letters": 3,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ganenet",
+  "text": "גַּנֶּנֶת",
+  "plain": "גננת",
+  "pic": "",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 3,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "raketa",
+  "text": "רָקֶטָה",
+  "plain": "רקטה",
+  "pic": "🚀",
+  "level": 4,
+  "stage": 5,
+  "station": 12,
+  "syllables": 3,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "judgment",
+   "nikud:wiktionary"
+  ],
+  "confidence": "check",
+  "note": "Wiktionary: רָקֶטָה (used here); Nakdan: רָקֵטָה. Same level either way"
+ },
+ {
+  "id": "ani",
+  "text": "אֲנִי",
+  "plain": "אני",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 3,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mechonit",
+  "text": "מְכוֹנִית",
+  "plain": "מכונית",
+  "pic": "🚗",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 6,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "savta",
+  "text": "סַבְתָּא",
+  "plain": "סבתא",
+  "pic": "👵",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan"
+  ],
+  "confidence": "check",
+  "note": "kept the app's סַבְתָּא; Wiktionary and Nakdan's top option give the Aramaic-style סָבְתָא"
+ },
+ {
+  "id": "bakbuk",
+  "text": "בַּקְבּוּק",
+  "plain": "בקבוק",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 2,
+  "letters": 5,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "naalayim",
+  "text": "נַעֲלַיִם",
+  "plain": "נעלים",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 4,
+  "letters": 5,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "bevakasha",
+  "text": "בְּבַקָּשָׁה",
+  "plain": "בבקשה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 4,
+  "letters": 5,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "parpar",
+  "text": "פַּרְפַּר",
+  "plain": "פרפר",
+  "pic": "🦋",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "glida",
+  "text": "גְּלִידָה",
+  "plain": "גלידה",
+  "pic": "🍦",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chultza",
+  "text": "חֻלְצָה",
+  "plain": "חלצה",
+  "pic": "👕",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "arye",
+  "text": "אַרְיֵה",
+  "plain": "אריה",
+  "pic": "🦁",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yalda",
+  "text": "יַלְדָּה",
+  "plain": "ילדה",
+  "pic": "👧",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "gvina",
+  "text": "גְּבִינָה",
+  "plain": "גבינה",
+  "pic": "🧀",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ofanayim",
+  "text": "אוֹפַנַּיִם",
+  "plain": "אופנים",
+  "pic": "🚲",
+  "level": 5,
+  "stage": 3,
+  "station": 8,
+  "syllables": 4,
+  "letters": 6,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "michnasayim",
+  "text": "מִכְנָסַיִם",
+  "plain": "מכנסים",
+  "pic": "👖",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 4,
+  "letters": 6,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "garbayim",
+  "text": "גַּרְבַּיִם",
+  "plain": "גרבים",
+  "pic": "🧦",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shulchan",
+  "text": "שֻׁלְחָן",
+  "plain": "שלחן",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mischak",
+  "text": "מִשְׂחָק",
+  "plain": "משחק",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "barvaz",
+  "text": "בַּרְוָז",
+  "plain": "ברוז",
+  "pic": "🦆",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ambatya",
+  "text": "אַמְבַּטְיָה",
+  "plain": "אמבטיה",
+  "pic": "🛁",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 6,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tarnegol",
+  "text": "תַּרְנְגוֹל",
+  "plain": "תרנגול",
+  "pic": "🐓",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 6,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "arnav",
+  "text": "אַרְנָב",
+  "plain": "ארנב",
+  "pic": "🐇",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "primer-kp",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "etzba",
+  "text": "אֶצְבַּע",
+  "plain": "אצבע",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "body",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mishkafayim",
+  "text": "מִשְׁקָפַיִם",
+  "plain": "משקפים",
+  "pic": "👓",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 4,
+  "letters": 6,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "layla",
+  "text": "לַיְלָה",
+  "plain": "לילה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "time",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meil",
+  "text": "מְעִיל",
+  "plain": "מעיל",
+  "pic": "🧥",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "melafefon",
+  "text": "מְלָפְפוֹן",
+  "plain": "מלפפון",
+  "pic": "🥒",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 6,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nadneda",
+  "text": "נַדְנֵדָה",
+  "plain": "נדנדה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "migdal",
+  "text": "מִגְדָּל",
+  "plain": "מגדל",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "agvaniya",
+  "text": "עַגְבָנִיָּה",
+  "plain": "עגבניה",
+  "pic": "🍅",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 4,
+  "letters": 6,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "pasta",
+  "text": "פַּסְטָה",
+  "plain": "פסטה",
+  "pic": "🍝",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meluchlach",
+  "text": "מְלֻכְלָךְ",
+  "plain": "מלכלך",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "smicha",
+  "text": "שְׂמִיכָה",
+  "plain": "שמיכה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "agala",
+  "text": "עֲגָלָה",
+  "plain": "עגלה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 3,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "televizya",
+  "text": "טֶלֶוִיזְיָה",
+  "plain": "טלויזיה",
+  "pic": "📺",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 4,
+  "letters": 7,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:wiktionary"
+  ],
+  "confidence": "check",
+  "note": "three forms seen: Wiktionary טֶלֶוִיזְיָה (used here), Nakdan טֵלֵוִיזְיָה, draft טֵלֶוִיזְיָה. Level 5 either way"
+ },
+ {
+  "id": "achbar",
+  "text": "עַכְבָּר",
+  "plain": "עכבר",
+  "pic": "🐭",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chavita",
+  "text": "חֲבִיתָה",
+  "plain": "חביתה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kvish",
+  "text": "כְּבִישׁ",
+  "plain": "כביש",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "places",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "brecha",
+  "text": "בְּרֵכָה",
+  "plain": "ברכה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 3,
+  "letters": 4,
+  "category": "places",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chamor",
+  "text": "חֲמוֹר",
+  "plain": "חמור",
+  "pic": "🫏",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kivsa",
+  "text": "כִּבְשָׂה",
+  "plain": "כבשה",
+  "pic": "🐑",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "slicha",
+  "text": "סְלִיחָה",
+  "plain": "סליחה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "other",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzfardea",
+  "text": "צְפַרְדֵּעַ",
+  "plain": "צפרדע",
+  "pic": "🐸",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 4,
+  "letters": 5,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tmuna",
+  "text": "תְּמוּנָה",
+  "plain": "תמונה",
+  "pic": "🖼️",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "primer-kp",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mafteach",
+  "text": "מַפְתֵּחַ",
+  "plain": "מפתח",
+  "pic": "🔑",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 3,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "niyar",
+  "text": "נְיָר",
+  "plain": "ניר",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 3,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mazleg",
+  "text": "מַזְלֵג",
+  "plain": "מזלג",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "misparayim",
+  "text": "מִסְפָּרַיִם",
+  "plain": "מספרים",
+  "pic": "✂️",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 4,
+  "letters": 6,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kufsa",
+  "text": "קֻפְסָה",
+  "plain": "קפסה",
+  "pic": "📦",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tractor",
+  "text": "טְרַקְטוֹר",
+  "plain": "טרקטור",
+  "pic": "🚜",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 6,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "app",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "avatiach",
+  "text": "אֲבַטִּיחַ",
+  "plain": "אבטיח",
+  "pic": "🍉",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 4,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ofanoa",
+  "text": "אוֹפַנּוֹעַ",
+  "plain": "אופנוע",
+  "pic": "🏍️",
+  "level": 5,
+  "stage": 3,
+  "station": 8,
+  "syllables": 4,
+  "letters": 6,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "miklachat",
+  "text": "מִקְלַחַת",
+  "plain": "מקלחת",
+  "pic": "🚿",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chavera",
+  "text": "חֲבֵרָה",
+  "plain": "חברה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 3,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "matzchik",
+  "text": "מַצְחִיק",
+  "plain": "מצחיק",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 2,
+  "letters": 5,
+  "category": "adjectives",
+  "sources": [
+   "moe-teimot",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ahava",
+  "text": "אַהֲבָה",
+  "plain": "אהבה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 3,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shnitzel",
+  "text": "שְׁנִיצֶל",
+  "plain": "שניצל",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mishpacha",
+  "text": "מִשְׁפָּחָה",
+  "plain": "משפחה",
+  "pic": "👪",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "family",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mitbach",
+  "text": "מִטְבָּח",
+  "plain": "מטבח",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shtayim",
+  "text": "שְׁתַּיִם",
+  "plain": "שתים",
+  "pic": "2️⃣",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 3,
+  "letters": 4,
+  "category": "numbers",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form"
+ },
+ {
+  "id": "mekarer",
+  "text": "מְקָרֵר",
+  "plain": "מקרר",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 3,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "simcha",
+  "text": "שִׂמְחָה",
+  "plain": "שמחה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "arba",
+  "text": "אַרְבַּע",
+  "plain": "ארבע",
+  "pic": "4️⃣",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "numbers",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form"
+ },
+ {
+  "id": "oniya",
+  "text": "אֳנִיָּה",
+  "plain": "אניה",
+  "pic": "🚢",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 3,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shmone",
+  "text": "שְׁמוֹנֶה",
+  "plain": "שמונה",
+  "pic": "8️⃣",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "numbers",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high",
+  "note": "feminine counting form"
+ },
+ {
+  "id": "zebra",
+  "text": "זֶבְּרָה",
+  "plain": "זברה",
+  "pic": "🦓",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "dvora",
+  "text": "דְּבוֹרָה",
+  "plain": "דבורה",
+  "pic": "🐝",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mara",
+  "text": "מַרְאָה",
+  "plain": "מראה",
+  "pic": "🪞",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "hafta",
+  "text": "הַפְתָּעָה",
+  "plain": "הפתעה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "other",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nemala",
+  "text": "נְמָלָה",
+  "plain": "נמלה",
+  "pic": "🐜",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 3,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "zvuv",
+  "text": "זְבוּב",
+  "plain": "זבוב",
+  "pic": "🪰",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "michtav",
+  "text": "מִכְתָּב",
+  "plain": "מכתב",
+  "pic": "✉️",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "pri",
+  "text": "פְּרִי",
+  "plain": "פרי",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 3,
+  "category": "nature",
+  "sources": [
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tzaatzua",
+  "text": "צַעֲצוּעַ",
+  "plain": "צעצוע",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 4,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "machshev",
+  "text": "מַחְשֵׁב",
+  "plain": "מחשב",
+  "pic": "💻",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "home",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "simla",
+  "text": "שִׂמְלָה",
+  "plain": "שמלה",
+  "pic": "👗",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chanut",
+  "text": "חֲנוּת",
+  "plain": "חנות",
+  "pic": "🏪",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "places",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anachnu",
+  "text": "אֲנַחְנוּ",
+  "plain": "אנחנו",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "efroach",
+  "text": "אֶפְרוֹחַ",
+  "plain": "אפרוח",
+  "pic": "🐤",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sukariya",
+  "text": "סֻכָּרִיָּה",
+  "plain": "סכריה",
+  "pic": "🍭",
+  "level": 5,
+  "stage": 4,
+  "station": 9,
+  "syllables": 4,
+  "letters": 5,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nesicha",
+  "text": "נְסִיכָה",
+  "plain": "נסיכה",
+  "pic": "👸",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "family",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "dvash",
+  "text": "דְּבַשׁ",
+  "plain": "דבש",
+  "pic": "🍯",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 3,
+  "category": "food",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mesiba",
+  "text": "מְסִבָּה",
+  "plain": "מסבה",
+  "pic": "🎉",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 3,
+  "letters": 4,
+  "category": "other",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "migrash",
+  "text": "מִגְרָשׁ",
+  "plain": "מגרש",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "places",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "misada",
+  "text": "מִסְעָדָה",
+  "plain": "מסעדה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 15,
+  "syllables": 3,
+  "letters": 5,
+  "category": "places",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "talmid",
+  "text": "תַּלְמִיד",
+  "plain": "תלמיד",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 2,
+  "letters": 5,
+  "category": "family",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kfafot",
+  "text": "כְּפָפוֹת",
+  "plain": "כפפות",
+  "pic": "🧤",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 5,
+  "category": "clothes",
+  "sources": [
+   "cdi",
+   "nikud:nakdan"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "hipopotam",
+  "text": "הִיפּוֹפּוֹטָם",
+  "plain": "היפופוטם",
+  "pic": "🦛",
+  "level": 5,
+  "stage": 3,
+  "station": 8,
+  "syllables": 4,
+  "letters": 8,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "malka",
+  "text": "מַלְכָּה",
+  "plain": "מלכה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "family",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "galgal",
+  "text": "גַּלְגַּל",
+  "plain": "גלגל",
+  "pic": "🛞",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "vehicles",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tachana",
+  "text": "תַּחֲנָה",
+  "plain": "תחנה",
+  "pic": "🚉",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 3,
+  "letters": 4,
+  "category": "places",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "paamon",
+  "text": "פַּעֲמוֹן",
+  "plain": "פעמון",
+  "pic": "🔔",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "machberet",
+  "text": "מַחְבֶּרֶת",
+  "plain": "מחברת",
+  "pic": "📓",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kfar",
+  "text": "כְּפָר",
+  "plain": "כפר",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 3,
+  "category": "places",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "svivon",
+  "text": "סְבִיבוֹן",
+  "plain": "סביבון",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 6,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "shvil",
+  "text": "שְׁבִיל",
+  "plain": "שביל",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "places",
+  "sources": [
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "maglesha",
+  "text": "מַגְלֵשָׁה",
+  "plain": "מגלשה",
+  "pic": "🛝",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "moe-common",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tachposet",
+  "text": "תַּחְפֹּשֶׂת",
+  "plain": "תחפשת",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "menora",
+  "text": "מְנוֹרָה",
+  "plain": "מנורה",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 5,
+  "category": "home",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "yanshuf",
+  "text": "יַנְשׁוּף",
+  "plain": "ינשוף",
+  "pic": "🦉",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 2,
+  "letters": 5,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "pinguin",
+  "text": "פִּינְגְּוִין",
+  "plain": "פינגוין",
+  "pic": "🐧",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 7,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "achshav",
+  "text": "עַכְשָׁו",
+  "plain": "עכשו",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "time",
+  "sources": [
+   "cdi",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "dolfin",
+  "text": "דּוֹלְפִין",
+  "plain": "דולפין",
+  "pic": "🐬",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 2,
+  "letters": 6,
+  "category": "animals",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "afifon",
+  "text": "עֲפִיפוֹן",
+  "plain": "עפיפון",
+  "pic": "🪁",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 6,
+  "category": "toys",
+  "sources": [
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "mitriya",
+  "text": "מִטְרִיָּה",
+  "plain": "מטריה",
+  "pic": "☂️",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 5,
+  "category": "home",
+  "sources": [
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "ambulans",
+  "text": "אַמְבּוּלַנְס",
+  "plain": "אמבולנס",
+  "pic": "🚑",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 3,
+  "letters": 7,
+  "category": "vehicles",
+  "sources": [
+   "cdi",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nechmad",
+  "text": "נֶחְמָד",
+  "plain": "נחמד",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "adjectives",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "rechov",
+  "text": "רְחוֹב",
+  "plain": "רחוב",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 14,
+  "syllables": 2,
+  "letters": 4,
+  "category": "places",
+  "sources": [
+   "cdi",
+   "moe-teimot",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "zeev",
+  "text": "זְאֵב",
+  "plain": "זאב",
+  "pic": "🐺",
+  "level": 5,
+  "stage": 6,
+  "station": 13,
+  "syllables": 2,
+  "letters": 3,
+  "category": "animals",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "etmol",
+  "text": "אֶתְמוֹל",
+  "plain": "אתמול",
+  "pic": "",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 2,
+  "letters": 5,
+  "category": "time",
+  "sources": [
+   "cdi",
+   "moe-common",
+   "wikt-basic",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chanukiya",
+  "text": "חֲנֻכִּיָּה",
+  "plain": "חנכיה",
+  "pic": "🕎",
+  "level": 5,
+  "stage": 6,
+  "station": 16,
+  "syllables": 4,
+  "letters": 5,
+  "category": "toys",
+  "sources": [
+   "judgment",
+   "nikud:nakdan",
+   "nikud:wiktionary"
+  ],
+  "confidence": "high"
+ }
+]

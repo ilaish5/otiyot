@@ -70,3 +70,38 @@ drop policy if exists drawings_own on storage.objects;
 create policy drawings_own on storage.objects for all to authenticated
   using (bucket_id = 'drawings' and (storage.foldername(name))[1] = (select auth.uid())::text)
   with check (bucket_id = 'drawings' and (storage.foldername(name))[1] = (select auth.uid())::text);
+
+-- ---------- הקלטות לניתוח זיהוי הדיבור (מופעל מאזור ההורים, נכבה לבד אחרי N ניסיונות) ----------
+create table if not exists public.recordings (
+  id uuid primary key,
+  user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  word_id text not null,
+  target text not null,
+  storage_path text,                 -- null אם ההקלטה עצמה נכשלה (עדיין יש diag)
+  mime text,
+  duration_ms integer,
+  peak real,                         -- עוצמה מקסימלית 0..1
+  rms real,                          -- עוצמה ממוצעת 0..1
+  result text not null,              -- match | nomatch | no-speech | error:<x>
+  alternatives jsonb not null default '[]'::jsonb,
+  diag jsonb not null default '{}'::jsonb,   -- ציר זמן אירועי הזיהוי + כל התוצאות
+  device text,
+  ts timestamptz not null,
+  created_at timestamptz not null default now()
+);
+create index if not exists recordings_user_ts on public.recordings (user_id, ts desc);
+alter table public.recordings enable row level security;
+drop policy if exists own_rows on public.recordings;
+create policy own_rows on public.recordings for all to authenticated
+  using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
+revoke all on public.recordings from anon;
+
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values ('recordings', 'recordings', false, 3145728,
+        array['audio/mp4', 'audio/aac', 'audio/webm', 'audio/ogg', 'audio/mpeg', 'audio/wav', 'audio/x-m4a'])
+on conflict (id) do nothing;
+
+drop policy if exists recordings_own on storage.objects;
+create policy recordings_own on storage.objects for all to authenticated
+  using (bucket_id = 'recordings' and (storage.foldername(name))[1] = (select auth.uid())::text)
+  with check (bucket_id = 'recordings' and (storage.foldername(name))[1] = (select auth.uid())::text);

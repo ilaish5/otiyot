@@ -555,18 +555,84 @@
   gap: 8px;
 }
 
-/* רשימת מילים לפי שלב */
-.p-levels { display: flex; flex-direction: column; gap: 18px; }
-.p-level-head {
+/* רשימת מילים: שלב (נפתח / נסגר) ← תחנות ← מילים */
+.p-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-block-end: 14px;
+}
+.p-search .p-ico {
+  position: absolute;
+  inset-inline-start: 14px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.p-input--search {
+  padding-inline-start: 44px;
+  font-size: 17px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.p-input--search::-webkit-search-decoration { -webkit-appearance: none; }
+
+.p-stages,
+.p-results { display: flex; flex-direction: column; gap: 10px; }
+.p-stage {
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+}
+.p-stage.is-current { border-color: var(--go); }
+.p-stage-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  min-height: 56px;
+  padding-block: 8px;
+  padding-inline: 16px 12px;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.p-stage-head::-webkit-details-marker { display: none; }
+.p-stage-head::marker { content: ""; }
+.p-stage-head .p-word { font-weight: 600; }
+.p-stage-head > .p-ico {
+  flex: 0 0 auto;
+  color: var(--muted);
+  transition: transform .2s;
+}
+.p-stage[open] > .p-stage-head > .p-ico { transform: rotate(180deg); }
+.p-stage[open] > .p-stage-head { border-bottom: 1.5px solid var(--line); }
+.p-stage-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 14px 16px 16px;
+}
+.p-station-head {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 4px 8px;
   margin: 0 0 8px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 }
-.p-level-head .p-word { font-weight: 600; }
+.p-station-head .p-word { font-weight: 600; }
+.p-station.is-current {
+  margin-inline: -8px;
+  padding: 10px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--go-soft);
+}
+.p-badge--done { background: var(--pencil-soft); }
 .p-level-count {
   margin-inline-start: auto;
   color: var(--muted);

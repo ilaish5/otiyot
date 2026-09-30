@@ -32,10 +32,13 @@ export function say(text, rate = 0.75) {
 }
 
 // ---------- זיהוי דיבור ----------
-// מחזיר { alternatives: string[] } או { error: 'no-speech' | 'not-allowed' | 'network' | ... }
+// מחזיר { alternatives: string[], diag } או { error, diag }.
+// ילדים מפרקים מילה להברות ("בָּ... נָ... נָה"), אז מקשיבים ברצף ולא עוצרים בתוצאה הסופית הראשונה:
+// עוצרים אחרי שקט של silenceMs מהתוצאה האחרונה, או ב-maxMs. כל ההברות מחוברות לחלופה נוספת.
+// diag: ציר זמן של אירועי הזיהוי וכל התוצאות — לניתוח למה לא זוהה.
 let active = null;
-export function listen({ onStart, onInterim, onSpeech, maxMs = 5000 } = {}) {
-  if (!SR) return Promise.resolve({ error: 'unsupported' });
+export function listen({ onStart, onInterim, onSpeech, maxMs = 7000, silenceMs = 1300 } = {}) {
+  if (!SR) return Promise.resolve({ error: 'unsupported', diag: { events: [], results: [] } });
   stopListening();
   return new Promise((resolve) => {
     const rec = new SR();
@@ -43,32 +46,53 @@ export function listen({ onStart, onInterim, onSpeech, maxMs = 5000 } = {}) {
     rec.lang = 'he-IL';
     rec.interimResults = true;
     rec.maxAlternatives = 5;
-    rec.continuous = false;
-    const heard = new Set();
+    rec.continuous = true;
+    const t0 = performance.now();
+    const at = () => Math.round(performance.now() - t0);
+    const diag = { events: [], results: [], continuous: true };
+    const log = (e) => diag.events.push({ t: at(), e });
+    const finals = new Map(); // אינדקס תוצאה ← חלופות
+    let interim = null;
     let error = null;
-    let timer;
-    rec.onstart = () => { onStart?.(); timer = setTimeout(() => rec.stop(), maxMs); };
-    // לא כל דפדפן שולח את האירועים האלה; אם לא — פשוט אין חיווי "שומע"
-    rec.onsoundstart = rec.onspeechstart = () => onSpeech?.();
+    let maxTimer, quietTimer;
+    const stop = () => { try { rec.stop(); } catch {} };
+    rec.onstart = () => { log('start'); onStart?.(); maxTimer = setTimeout(stop, maxMs); };
+    rec.onaudiostart = () => log('audiostart');
+    rec.onsoundstart = () => { log('soundstart'); onSpeech?.(); };
+    rec.onspeechstart = () => { log('speechstart'); onSpeech?.(); };
+    rec.onspeechend = () => log('speechend');
+    rec.onsoundend = () => log('soundend');
+    rec.onaudioend = () => log('audioend');
     rec.onresult = (e) => {
-      for (let i = 0; i < e.results.length; i++) {
-        for (let j = 0; j < e.results[i].length; j++) {
-          const t = e.results[i][j].transcript.trim();
-          if (t) heard.add(t);
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const r = e.results[i];
+        const alts = [];
+        for (let j = 0; j < r.length; j++) {
+          const t = r[j].transcript.trim();
+          if (t) alts.push(t);
         }
-        onInterim?.(e.results[i][0].transcript);
-        // תוצאה סופית ראשונה מספיקה — מילה אחת
-        if (e.results[i].isFinal) rec.stop();
+        if (!alts.length) continue;
+        diag.results.push({ t: at(), final: r.isFinal, alts });
+        if (r.isFinal) { finals.set(i, alts); interim = null; } else interim = alts;
+        onInterim?.(alts[0]);
       }
+      clearTimeout(quietTimer);
+      quietTimer = setTimeout(stop, silenceMs);
     };
-    rec.onerror = (e) => { error = e.error; };
+    rec.onerror = (e) => { error = e.error; log('error:' + e.error); };
     rec.onend = () => {
-      clearTimeout(timer);
+      log('end');
+      clearTimeout(maxTimer); clearTimeout(quietTimer);
       active = null;
-      if (heard.size) resolve({ alternatives: [...heard] });
-      else resolve({ error: error || 'no-speech' });
+      const heard = new Set();
+      const parts = [...finals.values()];
+      if (interim) parts.push(interim);
+      for (const alts of parts) alts.forEach((a) => heard.add(a));
+      if (parts.length > 1) heard.add(parts.map((alts) => alts[0]).join(' ')); // ההברות יחד
+      if (heard.size) resolve({ alternatives: [...heard], diag });
+      else resolve({ error: error || 'no-speech', diag });
     };
-    try { rec.start(); } catch (err) { resolve({ error: 'start-failed' }); }
+    try { rec.start(); } catch (err) { log('start-failed'); resolve({ error: 'start-failed', diag }); }
   });
 }
 
@@ -87,6 +111,8 @@ export function normalize(s, leniency = 'normal') {
   let t = s.replace(NIKUD, '').replace(/[^א-ת\s]/g, ' ');
   t = t.replace(/[ךםןףץ]/g, (c) => FINALS[c]);
   if (leniency !== 'strict') t = t.replace(/[קטעו]/g, (c) => SOUNDALIKE[c]);
+  // א וע באמצע מילה וה בסוף לא נשמעות: "קַן" והזיהוי כותב "כאן"; "אִמָּא" / "אם"
+  if (leniency === 'normal') t = t.trim().split(/\s+/).filter(Boolean).map((w) => w[0] + w.slice(1).replace(/א/g, '').replace(/ה$/, '')).join(' ');
   if (leniency === 'lenient') {
     t = t.replace(/ש/g, 'ס').replace(/ח/g, 'כ');
     // אמות קריאה: ילדים ומנוע הזיהוי לא עקביים בי' וא' שבאמצע ובסוף מילה

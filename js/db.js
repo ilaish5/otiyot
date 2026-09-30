@@ -14,6 +14,7 @@ export const DEFAULT_SETTINGS = {
   leniency: 'normal', // strict | normal | lenient
   speechRate: 0.75,
   level: 1,
+  analyzeLeft: 30, // כמה ניסיונות קריאה הבאים יוקלטו לניתוח (0 = כבוי)
 };
 
 const SETTINGS_KEY = 'settings';

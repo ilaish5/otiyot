@@ -1,7 +1,10 @@
 // אזור הורים: התקדמות, מילים, ציורים והגדרות.
 // טקסט להורה בלי ניקוד. מילים של הילד תמיד עם ניקוד ובגופן המילים.
 
-import { LEVELS, BASE_WORDS } from './words.js';
+import { LEVELS, BASE_WORDS, stageOfStation, stageOfText } from './words.js';
+import {
+  stationFromSettings, clampStation, clampStage, lastStation, placeCustom, stationProgress, levelInfo, stationInfo, searchKey,
+} from './progress.js';
 import {
   getSettings, saveSettings, listCustomWords, addCustomWord, deleteCustomWord, getAllStats,
   listAttempts, listDrawings, deleteDrawing, resetProgress, exportAll, importAll,
@@ -21,6 +24,8 @@ const TABS = [
   { id: 'settings', label: 'הגדרות' },
   { id: 'lab', label: 'מעבדה' },
 ];
+
+import { countRecordings, deleteAllRecordings } from './recorder.js';
 
 const LAB_URL = 'http://127.0.0.1:8766/lab/';
 const LAB_CMD = 'cd "/Users/ilaish/Desktop/פרויקטים/תחומים/אישי/reading=learning" && python3 lab/server.py';
@@ -79,6 +84,7 @@ const ICONS = {
   backspace: '<path d="M15 5H4v14h11l6-7z"/><path d="M7.5 9.5l5 5"/><path d="M12.5 9.5l-5 5"/>',
   reset: '<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/>',
   chevron: '<path d="M6 9l6 6 6-6"/>',
+  search: '<circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.3-4.3"/>',
   shield: '<path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/>',
   cloud: '<path d="M7.5 18.5h9.5a4 4 0 0 0 .5-7.97A6 6 0 0 0 6.2 9.6 4.5 4.5 0 0 0 7.5 18.5z"/>',
@@ -237,9 +243,18 @@ function readStatus() {
 }
 
 // ---------- מילים ----------
-const levelName = (n) => LEVELS.find((l) => l.id === n)?.name || '';
-const levelOf = (w) => Math.min(Math.max(Number(w.level) || 1, 1), LEVELS.length);
-const allWords = (custom) => [...BASE_WORDS, ...[...custom].sort((a, b) => String(a.id).localeCompare(String(b.id)))];
+// שלב = צליל תנועה אחד (1-6). תחנה = קבוצת מילים בתוך שלב, ממוספרת ברצף בכל הרשימה (1..N)
+const levelName = (n) => levelInfo(n)?.name || '';
+// שמות השלבים להורה, בלי ניקוד ובכתיב מלא (הסרת הניקוד מ-LEVELS הייתה נותנת "קבוץ", "שוא")
+const PLAIN_STAGE = { 1: 'קמץ ופתח', 2: 'חיריק', 3: 'חולם', 4: 'שורוק וקובוץ', 5: 'צירה וסגול', 6: 'שווא' };
+const plainName = (n) => PLAIN_STAGE[clampStage(n)] || levelName(n).replace(/[\u0591-\u05C7]/g, '');
+const stageLabel = (n) => `שלב ${clampStage(n)} · ${levelInfo(n)?.sound || ''}`;
+// מילים של ההורה מקבלות level = שלב ו-station = התחנה הראשונה של השלב
+const allWords = (custom) => [
+  ...BASE_WORDS,
+  ...[...custom].filter((w) => w && w.id && w.text).map(placeCustom).sort((a, b) => String(a.id).localeCompare(String(b.id))),
+];
+const isRead = (stats, w) => (stats[w.id]?.correct || 0) > 0;
 const clean = (t) => t.replace(/\s+/g, ' ').trim();
 // "מילה אחת" / "3 מילים"
 const many = (n, one, plural) => (n === 1 ? one : `${n} ${plural}`);
@@ -384,13 +399,37 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
       catch { getSelection().selectAllChildren(cmd); }
     });
     const open = h('a', { class: 'p-btn p-btn--primary', href: LAB_URL, target: '_blank', rel: 'noopener' }, h('span', { class: 'p-btn-label' }, 'פתיחת המעבדה'));
-    return card('מעבדת קול',
+    // הקלטות לניתוח: כמה נשארו, כמה בענן, הפעלה/כיבוי ומחיקה
+    const left = Math.max(0, s.settings.analyzeLeft ?? 0);
+    const cloudCount = h('span', { class: 'p-muted' }, 'בודק כמה הקלטות שמורות…');
+    countRecordings().then((n) => { cloudCount.textContent = n == null ? 'לא ניתן לבדוק כרגע (צריך חיבור)' : `שמורות בענן: ${n}`; });
+    const status = h('p', { class: 'p-row-label' }, left ? `פעיל: ${left} הניסיונות הבאים יוקלטו` : 'כבוי');
+    const on = h('button', { type: 'button', class: 'p-btn p-btn--primary p-btn--sm' }, h('span', { class: 'p-btn-label' }, 'הקלט 30 ניסיונות'));
+    const off = h('button', { type: 'button', class: 'p-btn p-btn--ghost p-btn--sm' }, h('span', { class: 'p-btn-label' }, 'כיבוי'));
+    on.addEventListener('click', () => { persist({ analyzeLeft: 30 }, 'ההקלטה הופעלה'); status.textContent = 'פעיל: 30 הניסיונות הבאים יוקלטו'; });
+    off.addEventListener('click', () => { persist({ analyzeLeft: 0 }, 'ההקלטה כובתה'); status.textContent = 'כבוי'; });
+    const del = h('button', { type: 'button', class: 'p-btn p-btn--danger p-btn--sm' }, h('span', { class: 'p-btn-label' }, 'מחיקת כל ההקלטות'));
+    twoStep(del, {
+      confirm: h('span', { class: 'p-btn-label' }, 'למחוק את כל ההקלטות?'),
+      onConfirm: async () => {
+        const r = await deleteAllRecordings();
+        if (!r.ok) throw new Error('delete');
+        toast(`נמחקו ${r.count} הקלטות`);
+        cloudCount.textContent = 'שמורות בענן: 0';
+      },
+      onError: () => toast('המחיקה נכשלה'),
+    });
+    const rec = card('הקלטות לניתוח זיהוי הדיבור',
+      note('כשפעיל, כל ניסיון קריאה נשמר בענן (bucket פרטי, רק אתה רואה): הקול, מה הזיהוי שמע, ציר הזמן ועוצמת הקול. ככה אפשר להבין למה מילה לא זוהתה. נכבה לבד אחרי המספר שנבחר.'),
+      status, cloudCount, h('div', { class: 'p-row' }, on, off), del);
+
+    return [rec, card('מעבדת קול',
       note('משווים מנועי הקראה וזיהוי דיבור על הקול של הילד: הוא קורא מילה, אתה מסמן אם קרא נכון, והמעבדה מראה איזה מנוע צדק.'),
       onIpad ? note('המעבדה רצה על המק בלבד (שרת מקומי ומודלים). פתח אותה מהמק.', 'error') : null,
       h('p', { class: 'p-muted' }, '1. בטרמינל במק:'),
       cmd, copy,
       h('p', { class: 'p-muted' }, '2. ב-Safari במק (אותו מנוע זיהוי של אפל כמו באייפד):'),
-      onIpad ? h('code', { class: 'p-code', dir: 'ltr' }, LAB_URL) : open);
+      onIpad ? h('code', { class: 'p-code', dir: 'ltr' }, LAB_URL) : open)];
   }
 
   const RENDER = { progress: renderProgress, words: renderWords, drawings: renderDrawings, settings: renderSettings, lab: renderLab };
@@ -458,18 +497,25 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
     if (stale(token)) return null;
     const words = allWords(custom);
     const byId = new Map(words.map((w) => [w.id, w]));
-    const lvl = Number(s.settings.level) || 1;
-    const read = (w) => (stats[w.id]?.correct || 0) > 0;
-    const scope = words.filter((w) => levelOf(w) <= lvl);
-    const inLevel = words.filter((w) => levelOf(w) === lvl);
+    const station = stationFromSettings(s.settings);
+    const stage = stageOfStation(station);
+    const stationsInStage = levelInfo(stage)?.stations?.length || 1;
+    const prog = stationProgress(words, stats, station); // { count, mastered, needed } — needed = 80% מהתחנה
+    const last = station === lastStation();
+    const read = (w) => isRead(stats, w);
+    const scope = words.filter((w) => w.station <= station);
     const readScope = scope.filter(read).length;
     const solo = attempts.filter((a) => a.outcome === 'solo').length;
     const t0 = startOfDay();
     const today = attempts.filter((a) => a.ts >= t0);
 
     const tiles = h('div', { class: 'p-tiles' },
-      tile('שלב', lvl, [word(levelName(lvl), 'p-word--xs'), `נקראו ${inLevel.filter(read).length} מתוך ${inLevel.length} בשלב`]),
-      tile('מילים שנקראו', readScope, [`מתוך ${scope.length} עד שלב ${lvl}`], scope.length ? readScope / scope.length : 0),
+      tile('שלב', stage, [
+        word(levelName(stage), 'p-word--xs'),
+        `תחנה ${stationInfo(station).n} מתוך ${stationsInStage}${last ? ' (אחרונה)' : ''}`,
+        last ? `נקראו ${prog.mastered} מתוך ${prog.count} בתחנה` : `נקראו ${prog.mastered} מתוך ${prog.needed} הדרושות למעבר`,
+      ], prog.needed ? prog.mastered / prog.needed : 0),
+      tile('מילים שנקראו', readScope, [`מתוך ${scope.length} עד התחנה הנוכחית`], scope.length ? readScope / scope.length : 0),
       tile('קרא לבד', attempts.length ? `${Math.round((solo / attempts.length) * 100)}%` : '—',
         [attempts.length ? `${solo} מתוך ${many(attempts.length, 'מילה אחת', 'מילים')}` : 'עוד אין נתונים']),
       tile('היום', today.length,
@@ -509,36 +555,130 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
   }
 
   // ---------- לשונית: מילים ----------
+  // 500 מילים ויותר: קבוצה נפתחת לכל שלב (השלב הנוכחי פתוח), ובתוכה התחנות.
+  // שלב סגור לא נבנה עד שפותחים אותו, וחיפוש מציג רק את המילים שנמצאו
   async function renderWords(token) {
     const [custom, stats] = await Promise.all([listCustomWords(), getAllStats()]);
     if (stale(token)) return null;
-    const list = h('div', { class: 'p-levels' });
-    const count = h('span', { class: 'p-count' });
-    const fill = (c, st) => {
-      const n = BASE_WORDS.length + c.length;
-      count.textContent = `${n} מילים${c.length ? ` · ${c.length} שהוספתם` : ''}`;
-      list.replaceChildren(...levelGroups(c, st, refresh));
-    };
-    async function refresh() {
-      const [c, st] = await Promise.all([listCustomWords(), getAllStats()]);
-      if (list.isConnected) fill(c, st);
-    }
-    fill(custom, stats);
-    return [wordForm(refresh), h('section', { class: 'p-card' }, h('div', { class: 'p-h2-row' }, h('h2', { class: 'p-h2' }, 'כל המילים'), count), list)];
+    const browser = wordBrowser(custom, stats);
+    return [wordForm(browser.refresh), browser.el];
   }
 
-  function levelGroups(custom, stats, onChange) {
-    const words = allWords(custom);
-    const lvl = Number(s.settings.level) || 1;
-    return LEVELS.map((l) => {
-      const ws = words.filter((w) => levelOf(w) === l.id);
-      return h('section', { class: `p-level${l.id === lvl ? ' is-current' : ''}` },
-        h('h3', { class: 'p-level-head' },
-          h('span', {}, `שלב ${l.id} · `), word(l.name, 'p-word--xs'),
-          l.id === lvl ? h('span', { class: 'p-badge' }, 'נוכחי') : null,
-          h('span', { class: 'p-level-count' }, many(ws.length, 'מילה אחת', 'מילים'))),
-        ws.length ? h('div', { class: 'p-chips' }, ws.map((w) => wordChip(w, stats[w.id], onChange))) : empty('אין מילים בשלב הזה'));
+  function wordBrowser(custom0, stats0) {
+    const cur = stationFromSettings(s.settings);
+    const curStage = stageOfStation(cur);
+    const opened = new Set([curStage]); // נשמר גם כשהרשימה נבנית מחדש (אחרי הוספה / מחיקה)
+    let data = null;
+    let query = '';
+    let timer = 0;
+
+    const count = h('span', { class: 'p-count' });
+    const search = h('input', {
+      type: 'search', class: 'p-input p-input--search', dir: 'rtl', lang: 'he',
+      placeholder: 'חיפוש מילה (עם או בלי ניקוד)', 'aria-label': 'חיפוש מילה',
+      autocomplete: 'off', autocorrect: 'off', autocapitalize: 'off', spellcheck: 'false', enterkeyhint: 'search',
     });
+    const stagesEl = h('div', { class: 'p-stages' });
+    const results = h('div', { class: 'p-results', hidden: true });
+    const el = h('section', { class: 'p-card' },
+      h('div', { class: 'p-h2-row' }, h('h2', { class: 'p-h2' }, 'כל המילים'), count),
+      h('label', { class: 'p-search' }, icon('search', 20), search),
+      results, stagesEl);
+
+    function load(custom, stats) {
+      const words = allWords(custom);
+      const byStation = new Map();
+      for (const w of words) {
+        if (!byStation.has(w.station)) byStation.set(w.station, []);
+        byStation.get(w.station).push(w);
+      }
+      data = { words, byStation, stats: stats || {}, keys: new Map(words.map((w) => [w.id, searchKey(w.text)])) };
+      const added = words.length - BASE_WORDS.length;
+      count.textContent = `${words.length} מילים${added ? ` · ${added} שהוספתם` : ''}`;
+    }
+
+    const chips = (ws) => h('div', { class: 'p-chips' }, ws.map((w) => wordChip(w, data.stats[w.id], refresh)));
+
+    function stationBlock(i) {
+      const ws = data.byStation.get(i) || [];
+      const p = stationProgress(ws, data.stats, i);
+      const here = i === cur;
+      return h('section', { class: `p-station${here ? ' is-current' : ''}` },
+        h('h4', { class: 'p-station-head' },
+          h('span', {}, `תחנה ${stationInfo(i).n}`),
+          here ? h('span', { class: 'p-badge' }, 'נוכחית') : null,
+          p.done ? h('span', { class: 'p-badge p-badge--done', title: '80% מהמילים נקראו נכון' }, '✓ עבר') : null,
+          h('span', { class: 'p-level-count' }, `נקראו ${p.mastered} מתוך ${p.count}`)),
+        ws.length ? chips(ws) : empty('אין מילים בתחנה הזו'));
+    }
+
+    function stageSection(l) {
+      const ids = l.stations || [];
+      const ws = ids.flatMap((i) => data.byStation.get(i) || []);
+      const read = ws.filter((w) => isRead(data.stats, w)).length;
+      const here = l.id === curStage;
+      const bodyEl = h('div', { class: 'p-stage-body' });
+      const d = h('details', { class: `p-stage${here ? ' is-current' : ''}` },
+        h('summary', { class: 'p-stage-head' },
+          h('span', { class: 'p-stage-title' }, `שלב ${l.id} · `, word(l.sound, 'p-word--xs'), ' ', word(l.name, 'p-word--xs')),
+          here ? h('span', { class: 'p-badge' }, 'נוכחי') : null,
+          h('span', { class: 'p-level-count' },
+            `${many(ids.length, 'תחנה אחת', 'תחנות')} · ${many(ws.length, 'מילה אחת', 'מילים')} · נקראו ${read}`),
+          icon('chevron', 18)),
+        bodyEl);
+      const fill = () => { if (!bodyEl.childElementCount) bodyEl.append(...ids.map(stationBlock)); };
+      if (opened.has(l.id)) { d.open = true; fill(); }
+      d.addEventListener('toggle', () => {
+        if (d.open) { opened.add(l.id); fill(); } else opened.delete(l.id);
+      });
+      return d;
+    }
+
+    function renderResults() {
+      const q = searchKey(query);
+      stagesEl.hidden = !!q;
+      results.hidden = !q;
+      if (!q) { results.replaceChildren(); return; }
+      const hits = data.words.filter((w) => data.keys.get(w.id).includes(q));
+      if (!hits.length) { results.replaceChildren(empty('לא נמצאו מילים')); return; }
+      const groups = new Map(); // תחנה → מילים, לפי סדר התחנות
+      for (const w of hits) {
+        if (!groups.has(w.station)) groups.set(w.station, []);
+        groups.get(w.station).push(w);
+      }
+      results.replaceChildren(
+        h('p', { class: 'p-hint' }, hits.length === 1 ? 'נמצאה מילה אחת' : `נמצאו ${hits.length} מילים`),
+        ...[...groups.entries()].sort((a, b) => a[0] - b[0]).map(([i, ws]) => {
+          const st = stationInfo(i);
+          return h('section', { class: `p-station${i === cur ? ' is-current' : ''}` },
+            h('h4', { class: 'p-station-head' },
+              h('span', {}, `שלב ${st.stage} · `, word(levelInfo(st.stage).sound, 'p-word--xs'), ` · תחנה ${st.n}`),
+              i === cur ? h('span', { class: 'p-badge' }, 'נוכחית') : null),
+            chips(ws));
+        }));
+    }
+
+    function build() {
+      stagesEl.replaceChildren(...LEVELS.map(stageSection));
+      renderResults();
+    }
+
+    async function refresh() {
+      const [c, st] = await Promise.all([listCustomWords(), getAllStats()]);
+      if (s.closed || !el.isConnected) return;
+      load(c, st);
+      build();
+    }
+
+    search.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { query = search.value; if (data) renderResults(); }, 120);
+    });
+    search.addEventListener('search', () => { clearTimeout(timer); query = search.value; renderResults(); });
+
+    load(custom0, stats0);
+    build();
+    return { el, refresh };
   }
 
   function wordChip(w, st, onChange) {
@@ -566,7 +706,18 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
       autocapitalize: 'off', spellcheck: 'false', enterkeyhint: 'done', 'aria-describedby': 'pw-msg',
     });
     const picIn = h('input', { id: 'pw-pic', type: 'text', class: 'p-input p-input--pic', maxLength: 8, autocomplete: 'off', autocorrect: 'off', spellcheck: 'false' });
-    const levelSel = mkSelect('pw-level', LEVELS.map((l) => [l.id, `שלב ${l.id} · ${l.name}`]), Number(s.settings.level) || 1);
+    // השלב נקבע לבד לפי הניקוד שמקלידים, עד שההורה בוחר שלב בעצמו
+    const childStage = () => stageOfStation(stationFromSettings(s.settings));
+    const autoStage = (t) => (HAS_NIKUD.test(t) ? clampStage(stageOfText(t)) : childStage());
+    const levelSel = mkSelect('pw-level', LEVELS.map((l) => [l.id, `${stageLabel(l.id)} · ${plainName(l.id)}`]), childStage());
+    const levelHint = h('p', { class: 'p-hint', id: 'pw-level-hint' });
+    let levelTouched = false;
+    const syncStage = () => {
+      if (!levelTouched) levelSel.value = String(autoStage(clean(input.value)));
+      levelHint.textContent = levelTouched ? 'נבחר ידנית' : 'נקבע לבד לפי הניקוד. אפשר לשנות';
+    };
+    levelSel.setAttribute('aria-describedby', 'pw-level-hint');
+    levelSel.addEventListener('change', () => { levelTouched = true; syncStage(); });
     const preview = h('div', { class: 'p-preview', 'aria-hidden': 'true' });
     const msg = h('p', { id: 'pw-msg', class: 'p-msg', 'aria-live': 'polite' });
     const addLabel = h('span', { class: 'p-btn-label' }, 'הוסף מילה');
@@ -590,6 +741,7 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
     };
     const changed = () => {
       drawPreview();
+      syncStage();
       if (warned !== null && warned !== clean(input.value)) setWarned(null);
       setMsg('');
     };
@@ -639,31 +791,33 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
         hint('כותבים אות ואז נוגעים בסימן הניקוד שלה')),
       h('div', { class: 'p-form-opts' },
         h('div', { class: 'p-field' }, h('label', { class: 'p-label', for: 'pw-pic' }, 'תמונה (אימוג׳י, לא חובה)'), picIn),
-        h('div', { class: 'p-field' }, h('label', { class: 'p-label', for: 'pw-level' }, 'שלב'), selectBox(levelSel))),
+        h('div', { class: 'p-field' }, h('label', { class: 'p-label', for: 'pw-level' }, 'שלב'), selectBox(levelSel), levelHint)),
       msg,
       h('div', { class: 'p-actions' }, addBtn, sayBtn));
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (busy) return;
-      const text = clean(input.value);
+      const text = clean(input.value).normalize('NFC'); // אותו סדר סימנים כמו ברשימת המילים
       if (!HEB_LETTER.test(text)) return setMsg('צריך לפחות אות עברית אחת', 'error');
       if (!ALLOWED.test(text)) return setMsg('אפשר רק אותיות עבריות וניקוד', 'error');
       if (ORPHAN_MARK.test(text)) return setMsg('יש סימן ניקוד בלי אות לפניו', 'error');
       busy = true;
       try {
         const existing = allWords(await listCustomWords());
-        if (existing.some((w) => w.text === text)) return setMsg('המילה כבר ברשימה', 'error');
+        if (existing.some((w) => String(w.text).normalize('NFC') === text)) return setMsg('המילה כבר ברשימה', 'error');
         if (!HAS_NIKUD.test(text) && warned !== text) {
           setWarned(text);
           return setMsg('אין ניקוד. מומלץ להוסיף', 'warn');
         }
-        await addCustomWord({ text, pic: picIn.value.trim(), level: Number(levelSel.value) });
+        const stage = clampStage(levelSel.value);
+        await addCustomWord({ text, pic: picIn.value.trim(), level: stage });
         input.value = '';
         picIn.value = '';
+        levelTouched = false;
         setWarned(null);
         changed();
-        toast('נוספה');
+        toast(`נוספה לשלב ${stage}`);
         await onAdded();
       } catch (err) {
         console.error(err);
@@ -674,6 +828,7 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
     });
 
     drawPreview();
+    syncStage();
     return form;
   }
 
@@ -849,8 +1004,18 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
     reward.addEventListener('change', () => persist({ wordsPerReward: Number(reward.value) }));
     const tries = mkSelect('ps-tries', [1, 2, 3].map((n) => [n, String(n)]), cur.attemptsBeforeNext);
     tries.addEventListener('change', () => persist({ attemptsBeforeNext: Number(tries.value) }));
-    const level = mkSelect('ps-level', LEVELS.map((l) => [l.id, `שלב ${l.id} · ${l.name}`]), cur.level);
-    level.addEventListener('change', () => persist({ level: Number(level.value) }));
+    // התחנה של הילד, מקובצת לפי שלב: "שלב 2 · אִ — תחנה 1 (32 מילים)"
+    const station = h('select', { id: 'ps-station' },
+      LEVELS.map((l) => h('optgroup', { label: `${stageLabel(l.id)} · ${plainName(l.id)}` },
+        (l.stations || []).map((i) => {
+          const st = stationInfo(i);
+          return h('option', { value: String(i) }, `${stageLabel(l.id)} — תחנה ${st.n} (${many(st.count, 'מילה אחת', 'מילים')})`);
+        }))));
+    station.value = String(stationFromSettings(cur));
+    station.addEventListener('change', () => {
+      const v = clampStation(station.value);
+      persist({ station: v, level: stageOfStation(v) });
+    });
 
     // דיבור
     const leniency = h('fieldset', { class: 'p-radios' },
@@ -995,7 +1160,7 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
         flushName();
         await saved();
         await resetProgress();
-        await persist({ level: 1 }, null);
+        await persist({ station: 1, level: stageOfStation(1) }, null);
         toast('ההתקדמות אופסה');
         showTab('settings');
       },
@@ -1083,7 +1248,7 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
           'כשכבוי, הילד יכול לקרוא בלי לעבור על הקווים'),
         row('ps-reward', 'מילים נכונות עד דף ציור', selectBox(reward)),
         row('ps-tries', 'ניסיונות לפני שממשיכים', selectBox(tries), 'אחרי זה המילה מושמעת וממשיכים'),
-        row('ps-level', 'שלב נוכחי', selectBox(level), 'השלב עולה לבד כשכל מילות השלב נקראו נכון'))),
+        row('ps-station', 'תחנה נוכחית', selectBox(station), 'עוברים לתחנה הבאה לבד כש-80% ממילות התחנה נקראו נכון לפחות פעם אחת'))),
       card('דיבור והקראה', h('div', { class: 'p-rows' },
         h('div', { class: 'p-row p-row--stack' }, leniency),
         row('ps-rate', 'מהירות הקראה', h('span', { class: 'p-rate' }, rate, rateOut, rateTest), voiceNote),
@@ -1094,7 +1259,7 @@ export async function openParent(container, { onClose, onSignedOut } = {}) {
         row(null, 'גיבוי', h('span', { class: 'p-btns' }, dlBtn, upBtn, file),
           'הקובץ כולל הגדרות, מילים, התקדמות וציורים', backupMsg),
         h('div', { class: 'p-row' }, storageLine),
-        row(null, 'איפוס התקדמות', resetBtn, 'מוחק את היסטוריית הקריאה (גם בענן) ומחזיר לשלב 1. מילים, ציורים והגדרות נשארים.'))),
+        row(null, 'איפוס התקדמות', resetBtn, 'מוחק את היסטוריית הקריאה (גם בענן) ומחזיר לתחנה הראשונה. מילים, ציורים והגדרות נשארים.'))),
       card('חשבון', h('div', { class: 'p-rows' },
         h('div', { class: 'p-row p-row--stack' },
           h('div', { class: 'p-row-text' },
